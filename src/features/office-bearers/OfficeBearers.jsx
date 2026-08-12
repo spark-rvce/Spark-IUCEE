@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Reveal from '../../components/Reveal';
 import Footer from '../../components/Footer';
@@ -257,6 +257,120 @@ const verticalsData = [
 ];
 
 /* ════════════════════════════════════════════════════════════
+   PREVIOUS LEADERSHIP TEAMS DATA (STANDARDIZED NAMES & SORTED)
+════════════════════════════════════════════════════════════ */
+const previousYearsData = [
+  {
+    yearKey: '2025',
+    yearLabel: '2025',
+    coreTeam: [
+      { role: 'President', name: 'Prathik P Kekare', dept: 'ECE' },
+      { role: 'Vice-President', name: 'Rupini Hulikatti', dept: 'IEM' },
+      { role: 'Secretary', name: 'R Sunidhi', dept: 'ECE' },
+      { role: 'Joint Secretary', name: 'Prajwal Jathanna', dept: 'ECE' },
+      { role: 'Treasurer', name: 'Tejas Math', dept: 'ECE' },
+    ],
+    wings: [
+      {
+        title: 'Activities and Events',
+        heads: [{ name: 'Dhruthi Rudrangi', dept: 'ISE' }],
+      },
+      {
+        title: 'Industrial Connect and People Operations',
+        heads: [
+          { name: 'Aaditya Raj', dept: 'CSE(CY)' },
+          { name: 'Harshit Saroha', dept: 'ETE' },
+        ],
+      },
+      {
+        title: 'Projects, Research and Development',
+        heads: [{ name: 'Shriyansh Agarwal', dept: 'CSE(CY)' }],
+      },
+      {
+        title: 'Social Media',
+        heads: [
+          { name: 'Sachin Gowda', dept: 'EEE' },
+          { name: 'Vijaylaxmi Patil', dept: 'EIE' },
+        ],
+      },
+      {
+        title: 'Women Empowerment',
+        heads: [{ name: 'Aarushi Das', dept: 'BT' }],
+      },
+    ],
+  },
+  {
+    yearKey: '2024',
+    yearLabel: '2024',
+    coreTeam: [
+      { role: 'President', name: 'Ashok R' },
+      { role: 'Vice-President', name: 'Nikitha Sunil' },
+      { role: 'Secretary', name: 'Jigyasa Agarwaal' },
+      { role: 'Treasurer', name: 'Harsh Gupta' },
+    ],
+    wings: [
+      {
+        title: 'Activities and Events',
+        heads: [{ name: 'Abhishek Saraff' }],
+      },
+      {
+        title: 'Industrial Connect and People Operations',
+        heads: [{ name: 'Adarsh Shrivatsava' }, { name: 'Poornachandra' }],
+      },
+      {
+        title: 'Projects, Research and Development',
+        heads: [{ name: 'Abhishek S' }, { name: 'Yashwanth S' }],
+      },
+      {
+        title: 'Social Media',
+        heads: [{ name: 'Gayatri Venkatesh' }],
+      },
+      {
+        title: 'Women Empowerment',
+        heads: [{ name: 'Nikitha Sunil' }],
+      },
+    ],
+  },
+  {
+    yearKey: '2023',
+    yearLabel: '2023',
+    coreTeam: [
+      { role: 'President', name: 'Suraj R S' },
+      { role: 'Vice-President', name: 'Inchara N Aradhya' },
+      { role: 'Secretary', name: 'Shankaramma' },
+      { role: 'Treasurer', name: 'Vaibhavi Mokashi' },
+    ],
+    wings: [
+      {
+        title: 'Activities and Events',
+        heads: [{ name: 'Rakshith C M' }, { name: 'Varshith K Battikoppad' }],
+      },
+      {
+        title: 'Industrial Connect and People Operations',
+        heads: [{ name: 'Gohitha Maheshwari J' }, { name: 'Shruthishree S' }],
+      },
+      {
+        title: 'Projects, Research and Development',
+        heads: [
+          { name: 'Chaitanya Dev Sahdev' },
+          { name: 'Krish Dhankar' },
+          { name: 'Mohit Chikkadi' },
+          { name: 'Prajwal G Angadi' },
+        ],
+      },
+      {
+        title: 'Social Media',
+        heads: [{ name: 'Mukul G Kulkarni' }, { name: 'Sahana Vaddi' }],
+      },
+      {
+        title: 'Women Empowerment',
+        heads: [{ name: 'Soundarya Das' }, { name: 'Varshini G S' }],
+      },
+    ],
+  },
+];
+
+/* ════════════════════════════════════════════════════════════
    UNIFORM CARD COMPONENTS (FIXED DIMENSIONS & ICONS)
 ════════════════════════════════════════════════════════════ */
 
@@ -356,10 +470,51 @@ const MemberCard = ({ name, role, dept, photo, email, linkedin, imageClass, cont
   </div>
 );
 
+// Name Plate Card for Previous Members
+const NamePlateCard = ({ role, name, dept, isCore }) => (
+  <div
+    className={`group bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between shrink-0 ${
+      isCore ? 'w-[250px] sm:w-[275px] h-[130px]' : 'w-[210px] sm:w-[235px] h-[110px]'
+    }`}
+  >
+    {/* Blue Cap Top Banner */}
+    <div
+      className={`bg-sparkBlue text-white font-bold uppercase tracking-wider text-center border-b border-sparkLightBlue/40 truncate shrink-0 ${
+        isCore ? 'text-xs py-2.5 px-4' : 'text-[11px] py-2 px-3'
+      }`}
+    >
+      {role}
+    </div>
+    {/* White Body */}
+    <div className="p-3 text-center flex-1 flex flex-col justify-center items-center">
+      <h5
+        className={`font-black text-sparkBlue leading-tight group-hover:text-sparkAccent transition-colors line-clamp-1 ${
+          isCore ? 'text-base sm:text-lg' : 'text-sm sm:text-base'
+        }`}
+      >
+        {name}
+      </h5>
+      {dept && (
+        <span
+          className={`inline-block mt-1 font-semibold text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200/60 shrink-0 ${
+            isCore ? 'text-xs' : 'text-[11px]'
+          }`}
+        >
+          {dept}
+        </span>
+      )}
+    </div>
+  </div>
+);
+
 /* ════════════════════════════════════════════════════════════
    OFFICE BEARERS PAGE COMPONENT
 ════════════════════════════════════════════════════════════ */
 const OfficeBearers = () => {
+  const [activeYearKey, setActiveYearKey] = useState('2025');
+
+  const selectedYearData = previousYearsData.find((y) => y.yearKey === activeYearKey);
+
   return (
     <>
       {/* Hero Banner — Title ONLY */}
@@ -490,6 +645,88 @@ const OfficeBearers = () => {
               </div>
             </div>
           ))}
+        </section>
+
+        {/* ════════════════════════════════════════════════════════════
+           PREVIOUS LEADERSHIP TEAMS (ARCHIVES)
+        ════════════════════════════════════════════════════════════ */}
+        <section className="w-full px-6 md:px-12 xl:px-20 py-16 border-t-2 border-slate-200/60 bg-slate-100/50">
+          <div className="max-w-screen-xl mx-auto">
+            
+            <Reveal>
+              <div className="text-center mb-10">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-sparkBlue tracking-tight mb-3">
+                  Previous Leadership Teams
+                </h2>
+              </div>
+            </Reveal>
+
+            {/* Academic Year Tab Selector Switcher */}
+            <Reveal delay={0.1}>
+              <div className="flex justify-center mb-12">
+                <div className="inline-flex p-1.5 bg-white rounded-2xl shadow-md border border-slate-200 gap-1.5 sm:gap-2">
+                  {previousYearsData.map((y) => {
+                    const isActive = y.yearKey === activeYearKey;
+                    return (
+                      <button
+                        key={y.yearKey}
+                        onClick={() => setActiveYearKey(y.yearKey)}
+                        className={`px-6 py-2.5 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 ${
+                          isActive
+                            ? 'bg-sparkBlue text-white shadow-md scale-105'
+                            : 'text-slate-600 hover:text-sparkBlue hover:bg-slate-50'
+                        }`}
+                      >
+                        {y.yearLabel}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Selected Year Content */}
+            {selectedYearData && (
+              <motion.div
+                key={selectedYearData.yearKey}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="space-y-8"
+              >
+                {/* Previous Core Team Box */}
+                <div className="bg-white/80 rounded-2xl p-5 md:p-6 border border-slate-200/80 shadow-sm max-w-5xl mx-auto">
+                  <h4 className="text-center font-black text-sparkBlue text-base sm:text-lg uppercase tracking-wider mb-5 pb-2 border-b border-slate-100">
+                    Core Team
+                  </h4>
+                  <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+                    {selectedYearData.coreTeam.map((m, idx) => (
+                      <NamePlateCard key={idx} role={m.role} name={m.name} dept={m.dept} isCore={true} />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Previous Wing Heads — Grouped by Wing Box */}
+                {selectedYearData.wings.map((wing) => (
+                  <div
+                    key={wing.title}
+                    className="bg-white/80 rounded-2xl p-5 md:p-6 border border-slate-200/80 shadow-sm max-w-5xl mx-auto"
+                  >
+                    <h4 className="text-center font-black text-sparkBlue text-base sm:text-lg uppercase tracking-wider mb-5 pb-2 border-b border-slate-100">
+                      {wing.title}
+                    </h4>
+                    <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+                      {wing.heads.map((head, idx) => (
+                        <NamePlateCard key={idx} role="Wing Head" name={head.name} dept={head.dept} isCore={false} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+
+              </motion.div>
+            )}
+
+          </div>
         </section>
 
       </div>
