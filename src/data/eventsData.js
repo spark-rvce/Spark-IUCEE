@@ -6,48 +6,183 @@ export const annualReportPdf = "https://drive.google.com/open?id=1A5KdES_x6BTzZM
 export const eventsByYear = {
   2023: {
     year: "2023",
-    tagline: "Foundational Projects & Initial Milestones",
-    description: "The 2023 academic year focused on establishing core project learning workflows and inaugural workshop series.",
+    tagline: "A Year of Learning, Impact & Innovation",
+    description: "A collection of SPARK activities, industry visits, talks, competitions and outreach initiatives conducted throughout 2023.",
     status: "active",
     events: [
       {
-        id: "energy-swaraj-2023",
-        title: "Launch of Energy Swaraj Club",
-        tag: "Sustainability",
-        date: "15th September 2023",
+        id: "spark-inaugural-2023",
+        title: "SPARK Inaugural Ceremony",
+        tag: "Ceremony",
+        date: "14 February 2023",
         location: "RVCE Campus",
-        shortDesc: "Inaugurated the Energy Swaraj Club under the Centre for Smart Vidyuth & Sustainable Solutions to promote energy literacy.",
-        fullDesc: "Inaugurated the Energy Swaraj Club under the Centre for Smart Vidyuth & Sustainable Solutions at RVCE. The club promotes energy literacy, renewable energy adoption, and sustainable living practices among students.",
-        images: ["/hero.png"],
-        highlights: ["Energy literacy campaign launch", "Solar energy awareness", "Interactive student demonstrations"],
-        speakers: ["Prof. Chetan Singh Solanki (Founder, Energy Swaraj Foundation)"],
-        stats: { attendance: "80 Students", impact: "High" }
+        shortDesc: "The inaugural ceremony marked an important beginning for SPARK, bringing together initiatives focused on learning, innovation, sustainability, social awareness and holistic development.",
+        fullDesc: "The SPARK Inaugural Ceremony introduced a range of initiatives aimed at holistic student development and practical learning. The year's activities included expert talks, industry visits, women empowerment initiatives, project-based learning, SDG competitions, entrepreneurship activities and The Insight podcast.",
+        images: [
+          "/events_2023/inaugural/20230214_153416.jpg",
+          "/events_2023/inaugural/IMG_1.jpg",
+          "/events_2023/inaugural/IMG_4156.jpg"
+        ],
+        highlights: [
+          "Launch of SPARK initiatives for the academic year",
+          "Focus on holistic student development",
+          "Practical learning and innovation",
+          "Sustainability and social awareness"
+        ],
+        speakers: [],
+        stats: {}
       },
       {
-        id: "kaalnirnay-2023",
-        title: "KAALNIRNAY (Climate Clock Distribution)",
-        tag: "Environment",
-        date: "14th October 2023",
-        location: "RVCE Main Auditorium",
-        shortDesc: "Preventing climate change through climate clock distribution and hands-on impact tutorials.",
-        fullDesc: "KAALNIRNAY was an environmental contest and awareness program under SPARK focused on climate change. It featured climate clock distribution, hands-on tutorials, and educated students on the relationship between carbon accumulation and global temperature rise.",
-        images: ["/kaalnirnay.png"],
-        highlights: ["Climate Clock distribution across campus", "Hands-on tutorials on carbon footprint reduction", "Climate emergency awareness"],
-        speakers: ["SPARK Environment Team"],
-        stats: { attendance: "150 Students", clocks: "Distributed" }
+        id: "environment-day-2023",
+        title: "Environment Day",
+        tag: "Environment & Sustainability",
+        date: "6 May 2023",
+        location: "RVCE Campus",
+        shortDesc: "A World Environment Day initiative centred around environmental awareness and the #BeatPlasticPollution theme.",
+        fullDesc: "The Environment Day activity encouraged students to engage with environmental issues through a quiz centred around the theme #BeatPlasticPollution.",
+        images: [
+          "/events_2023/environment-day/img__1.jpg",
+          "/events_2023/environment-day/img_2.jpg"
+        ],
+        highlights: [
+          "World Environment Day initiative",
+          "#BeatPlasticPollution theme",
+          "Environmental awareness",
+          "Student participation through a quiz"
+        ],
+        speakers: [],
+        stats: {}
       },
       {
-        id: "design-thinking-2023",
-        title: "Design Thinking & Entrepreneurship Workshop",
-        tag: "Skill Development",
-        date: "10th November 2023",
-        location: "IEM Auditorium, RVCE",
-        shortDesc: "A comprehensive workshop for early-year students detailing ideation frameworks and prototyping.",
-        fullDesc: "A comprehensive workshop for early-year engineering students detailing ideation frameworks, human-centered design principles, rapid prototyping pathways, and entrepreneurship fundamentals.",
-        images: ["/img1.jpg"],
-        highlights: ["Human-centered design frameworks", "Rapid prototyping hands-on activity", "Business model canvas introduction"],
-        speakers: ["RVCE Entrepreneurship Mentors"],
-        stats: { attendance: "95 Students", teams: "18 Prototypes" }
+        id: "raichur-industry-visit-2023",
+        title: "Industry Visit to Raichur",
+        tag: "Industry Visit",
+        date: "29 June 2023",
+        location: "Yeramarus Thermal Power Station & Raichur Thermal Power Station",
+        shortDesc: "An industrial visit providing students with exposure to thermal power generation and real-world industrial operations.",
+        fullDesc: "Students visited Yeramarus Thermal Power Station (YTPS) and Raichur Thermal Power Station (RTPS), gaining practical exposure to industrial environments and thermal power generation.",
+        images: [
+          "/events_2023/raichur/image.png",
+          "/events_2023/raichur/Screenshot 2026-08-10 194047.png",
+          "/events_2023/raichur/Screenshot 2026-08-10 194111.png"
+        ],
+        highlights: [
+          "Industrial exposure",
+          "Visit to YTPS",
+          "Visit to RTPS",
+          "Practical understanding of power generation"
+        ],
+        speakers: [],
+        stats: {}
+      },
+      {
+        id: "sdg-2023",
+        title: "SDG",
+        tag: "Competition",
+        date: "7 August 2023",
+        location: "RVCE",
+        shortDesc: "A photography competition encouraging students to explore and represent the United Nations Sustainable Development Goals through visual storytelling.",
+        fullDesc: "The SDG activity featured a two-round photography competition centred around the United Nations Sustainable Development Goals. Students used photography to creatively communicate ideas connected to sustainable development.",
+        images: [
+          "/events_2023/sdg/123.jpg",
+          "/events_2023/sdg/243.png"
+        ],
+        highlights: [
+          "Two-round photography competition",
+          "United Nations Sustainable Development Goals",
+          "Creative visual storytelling",
+          "Student participation and awareness"
+        ],
+        speakers: [],
+        stats: {}
+      },
+      {
+        id: "success-knowing-thyself-2023",
+        title: "Success is Knowing Thyself",
+        tag: "Women Empowerment",
+        date: "20 August 2023",
+        location: "RVCE",
+        shortDesc: "A Women Empowerment Wing initiative focused on self-awareness, personal growth and understanding one's own strengths.",
+        fullDesc: "The Women Empowerment Wing organised the 'Success is Knowing Thyself' talk with Dr. Geetha, focusing on self-awareness and personal development.",
+        images: [
+          "/events_2023/knowing-thyself/20230620_144858.jpg",
+          "/events_2023/knowing-thyself/imgg_1.JPG"
+        ],
+        highlights: [
+          "Women Empowerment Wing initiative",
+          "Focus on self-awareness",
+          "Personal growth and confidence",
+          "Interactive learning through a talk"
+        ],
+        speakers: [
+          "Dr. Geetha"
+        ],
+        stats: {}
+      },
+      {
+        id: "nexgen-entrepreneurship-2023",
+        title: "NexGen Entrepreneurship Talk",
+        tag: "Entrepreneurship",
+        date: "29 August 2023",
+        location: "RVCE",
+        shortDesc: "An entrepreneurship-focused talk on developing an entrepreneurial mindset and nurturing emerging entrepreneurs.",
+        fullDesc: "The NexGen Entrepreneurship Talk featured Dr. Amit from Marwadi University, Rajkot. The session focused on developing an entrepreneurial mindset and encouraging students to explore entrepreneurship.",
+        images: [
+          "/events_2023/nexgen/nexgen2.jpeg",
+          "/events_2023/nexgen/nexgen3.jpeg"
+        ],
+        highlights: [
+          "Entrepreneurial mindset",
+          "Nurturing emerging entrepreneurs",
+          "Entrepreneurship awareness",
+          "Expert interaction"
+        ],
+        speakers: [
+          "Dr. Amit, Marwadi University, Rajkot"
+        ],
+        stats: {}
+      },
+      {
+        id: "mysore-industry-visit-2023",
+        title: "Industry Visit to Mysore",
+        tag: "Industry Visit",
+        date: "31 August 2023",
+        location: "Infosys Mysore Campus",
+        shortDesc: "An industry visit that gave students exposure to a professional technology environment and insights into careers, innovation and industry practices.",
+        fullDesc: "Students visited the Infosys Mysore Campus and gained industry exposure through interaction with professionals, a campus tour and insights into technology, career opportunities, innovation and professional growth.",
+        images: [
+          "/events_2023/mysore/image.png",
+          "/events_2023/mysore/Screenshot 2026-08-10 193113.png"
+        ],
+        highlights: [
+          "Industry exposure",
+          "Infosys Mysore Campus visit",
+          "Interaction with professionals",
+          "Technology and career insights"
+        ],
+        speakers: [],
+        stats: {}
+      },
+      {
+        id: "shakti-shiksha-2023",
+        title: "Shakti Shiksha",
+        tag: "Social Outreach",
+        date: "23 December 2023",
+        location: "Gurukula Vidyapeeth",
+        shortDesc: "A social outreach initiative focusing on health, hygiene, career guidance, self-confidence and empowerment.",
+        fullDesc: "Shakti Shiksha was a social outreach initiative designed to create awareness around health and hygiene while providing career guidance and encouraging self-confidence and empowerment.",
+        images: [
+          "/events_2023/shakti-shiksha/20231223_141000.jpg",
+          "/events_2023/shakti-shiksha/20231223_141628.jpg"
+        ],
+        highlights: [
+          "Health and hygiene awareness",
+          "Career guidance",
+          "Self-confidence and empowerment",
+          "Community outreach"
+        ],
+        speakers: [],
+        stats: {}
       }
     ]
   },
@@ -236,20 +371,6 @@ export const eventsByYear = {
         highlights: ["Tour of rocket launch pads and assembly buildings", "Firsthand exposure to ISRO launch operations", "Interaction with space scientists", "104 SPARK students participated"],
         speakers: ["ISRO SDSC Engineers & Scientists"],
         stats: { attendance: "104 SPARK students", destination: "Sriharikota" }
-      },
-      {
-        id: "kaiga-npcil-visit-2025",
-        title: "NPCIL IV 2025 - Kaiga Power Plant",
-        tag: "Learning & Development",
-        date: "14th – 16th March 2025",
-        location: "Kaiga, Karnataka",
-        shortDesc: "Visited Kaiga Nuclear Power Plant to gain firsthand exposure to nuclear energy operations and reactor safety protocols.",
-        fullDesc: "Visited the Kaiga Nuclear Power Plant, operated by the Nuclear Power Corporation of India Ltd., to gain firsthand exposure to nuclear energy operations. The visit included insights into Pressurized Heavy Water Reactors (PHWRs), radiation safety protocols, and nuclear waste management practices.",
-        images: ["/kaiga_1.jpg", "/kaiga_2.jpg", "/kaiga_3.jpg"],
-        highlights: ["Insights into Pressurized Heavy Water Reactors (PHWRs)", "Radiation safety protocols", "Nuclear waste management practices", "Firsthand nuclear energy operations exposure"],
-        speakers: ["NPCIL Engineers"],
-        drivePhotos: "https://drive.google.com/drive/folders/1CIWaqkyNiSe_vm8WRq67AE7yTIronLf6?usp=sharing",
-        stats: { site: "Kaiga Nuclear Power Plant", type: "Nuclear Energy" }
       }
     ]
   },
@@ -268,7 +389,10 @@ export const eventsByYear = {
         location: "RVCE Campus",
         shortDesc: "Hands-on cybersecurity workshop equipping students with practical knowledge of cyber threats, ethical hacking, and data safety.",
         fullDesc: "A comprehensive hands-on Cyber Security Workshop conducted under the SPARK IUCEE RVCE Student Chapter. The session provided students with real-world exposure to threat identification, vulnerability assessment, data security protocols, ethical hacking techniques, and digital safety practices.",
-        images: ["/img1.jpg"],
+        images: [
+          "/events_2025/event_1/razz_1.jpg",
+          "/events_2025/event_1/razz_2.jpg"
+        ],
         highlights: [
           "Live demonstration of ethical hacking tools & penetration testing",
           "Data privacy and network security fundamentals",
@@ -285,7 +409,10 @@ export const eventsByYear = {
         location: "Seminar Hall, RVCE",
         shortDesc: "Keynote session by Ms. Girija Kolagada (VP Engineering at Progress Chef) on applying AI, data analytics, and automation in engineering.",
         fullDesc: "Delivered by Ms. Girija Kolagada, Vice President of Engineering at Progress Chef, this session provided students with deep industry insights into how Artificial Intelligence, Machine Learning, and automated data pipelines are transforming modern engineering solutions.",
-        images: ["/img2.jpg"],
+        images: [
+          "/events_2025/event_2/IMG_7905.jpg",
+          "/events_2025/event_2/IMG_7917.JPG"
+        ],
         highlights: [
           "Real-world enterprise AI implementation case studies",
           "Automated dev operations and DevOps intelligence",
@@ -302,7 +429,10 @@ export const eventsByYear = {
         location: "RVCE R&D Block",
         shortDesc: "Two-day workshop exploring hardware architectures, sensor interfaces, and quantum-aware processor optimization.",
         fullDesc: "Organized in collaboration with Anoraniya (The Quantum Club), this intensive two-day workshop focused on emerging hardware requirements for AI/ML and Quantum Systems. Topics covered classical-to-quantum state representation, signal conditioning, sensor hardware integration, and hardware-aware algorithm acceleration.",
-        images: ["/hero.png"],
+        images: [
+          "/events_2025/event_3/IMG_8834.jpg",
+          "/events_2025/event_3/IMG_8835.jpg"
+        ],
         highlights: [
           "Hands-on architectural breakdown of AI accelerator chips",
           "Quantum computing hardware interface protocols",
@@ -319,7 +449,13 @@ export const eventsByYear = {
         location: "RVCE Main Campus",
         shortDesc: "Engineering design competition evaluating hardware-centric and system-level prototypes developed by workshop participants.",
         fullDesc: "Conducted as the grand finale of the AI/ML and Quantum Computing workshop series, Design Fest provided a competitive showcase for participants to present hardware-centric solutions and system-level prototypes to faculty and industry judges.",
-        images: ["/img3.jpg"],
+        images: [
+          "/events_2025/event_4/DSC_0348.JPG",
+          "/events_2025/event_4/DSC_0670.JPG",
+          "/events_2025/event_4/IMG_4902.jpg",
+          "/events_2025/event_4/IMG_4953.jpg",
+          "/events_2025/event_4/IMG_4975.jpg"
+        ],
         highlights: [
           "Hardware prototype demonstrations to expert jury",
           "System-level efficiency and scalability evaluations",
@@ -336,7 +472,11 @@ export const eventsByYear = {
         location: "RVCE Innovation Center",
         shortDesc: "36-hour hackathon where 50+ student teams developed innovative AI-driven educational applications and tools.",
         fullDesc: "EduAIthon brought together over 50 student teams from across disciplines to build groundbreaking AI solutions addressing educational challenges. Teams hacked continuously over 3 days, developing AI tutors, automated assessment engines, and personalized learning platforms.",
-        images: ["/img4.jpg"],
+        images: [
+          "/events_2025/event_5/20250828_115852.jpg",
+          "/events_2025/event_5/20250828_115858.jpg",
+          "/events_2025/event_5/20250828_163544.jpg"
+        ],
         highlights: [
           "Over 50+ multi-disciplinary student teams participated",
           "36 hours of continuous coding, mentoring, and prototype building",
@@ -353,7 +493,12 @@ export const eventsByYear = {
         location: "Government Schools, Bengaluru",
         shortDesc: "Student-led STEM teaching sessions in government schools to foster scientific curiosity and practical math learning.",
         fullDesc: "In collaboration with the Agastya Foundation, SPARK members visited local government schools to conduct interactive hands-on science and mathematics demonstrations. The initiative simplified complex scientific principles through play, experiments, and engaging models.",
-        images: ["/img1.jpg"],
+        images: [
+          "/events_2025/event_6/20250830_100023AMByGPSMapCamera.jpg",
+          "/events_2025/event_6/20250830_104153amByGPSMapCamera.jpg",
+          "/events_2025/event_6/20250830_110855amByGPSMapCamera.jpg",
+          "/events_2025/event_6/IMG_20250830_110705.jpg"
+        ],
         highlights: [
           "Hands-on science experiment kits for school students",
           "Interactive math puzzle solving sessions",
@@ -370,7 +515,11 @@ export const eventsByYear = {
         location: "Sri Jnanakshi Vidyaniketan School",
         shortDesc: "Social outreach program focusing on self-awareness, confidence, health, hygiene, and career orientation.",
         fullDesc: "Shakti Shiksha was organized as a social outreach initiative at Sri Jnanakshi Vidyaniketan School. SPARK volunteers engaged with students through interactive discussions, icebreakers, and workshops emphasizing self-confidence, emotional well-being, personal hygiene, and mutual respect.",
-        images: ["/shakti.png"],
+        images: [
+          "/events_2025/event_7/20251023_140806.jpg",
+          "/events_2025/event_7/20251023_14653PMByGPSMapCamera.jpg",
+          "/events_2025/event_7/20251023_22607PMByGPSMapCamera.jpg"
+        ],
         highlights: [
           "Confidence-building & mental health awareness workshops",
           "Health & personal hygiene guidance",
@@ -387,7 +536,11 @@ export const eventsByYear = {
         location: "RVCE Campus Auditoriums",
         shortDesc: "A multi-event orientation introducing first-year engineering students to SPARK's project culture and technical wings.",
         fullDesc: "Organized to welcome newly admitted first-year engineering students, this induction program featured a series of four interactive events introducing engineering concepts, team problem-solving challenges, and the chapter's five specialized wings.",
-        images: ["/hero.png"],
+        images: [
+          "/events_2025/event_8/IMG_9080.jpg",
+          "/events_2025/event_8/IMG_9088.jpg",
+          "/events_2025/event_8/IMG_9106.jpg"
+        ],
         highlights: [
           "Introduction to SPARK's 5 specialized wings",
           "Hands-on mini engineering challenges for freshers",
@@ -404,7 +557,13 @@ export const eventsByYear = {
         location: "RVCE Campus Grounds",
         shortDesc: "High-energy technical treasure hunt with code clues, logic puzzles, and hardware challenges during 8th Mile.",
         fullDesc: "Mystery.EXE was hosted as a flagship technical treasure hunt during RVCE's annual fest, 8th Mile. Teams solved multi-layered algorithmic clues, cryptic debugging challenges, and physical checkpoints across campus to locate hidden targets.",
-        images: ["/img2.jpg"],
+        images: [
+          "/events_2025/event_9/IMG_0007.jpg",
+          "/events_2025/event_9/IMG_20251220_140701.jpg",
+          "/events_2025/event_9/IMG_9449.jpg",
+          "/events_2025/event_9/IMG_9953.jpg",
+          "/events_2025/event_9/IMG_9964 (1).jpg"
+        ],
         highlights: [
           "Multi-stage algorithmic & logical puzzle checkpoints",
           "Fast-paced competitive elimination rounds",
@@ -421,7 +580,10 @@ export const eventsByYear = {
         location: "Online & RVCE Campus",
         shortDesc: "Two-stage photography competition highlighting Sustainable Development Goals through visual storytelling.",
         fullDesc: "A two-round campus photography competition designed to spread awareness of the UN Sustainable Development Goals (SDGs). Students submitted visual stories capturing climate action, clean energy, quality education, and urban sustainability.",
-        images: ["/youth.png"],
+        images: [
+          "/events_2025/event_10/sdg_birds.jpg",
+          "/events_2025/event_10/sdg_misty_landscape.jpg"
+        ],
         highlights: [
           "Two competitive rounds of storytelling photography",
           "Expert evaluation of artistic composition & SDG relevance",
@@ -438,7 +600,12 @@ export const eventsByYear = {
         location: "Statewide / RVCE Representation",
         shortDesc: "SPARK team members won 1st place in Elocution and 1st & 3rd place in Ideathon at Avishkar Manthan.",
         fullDesc: "SPARK members represented RVCE at Avishkar Manthan and national project expos, securing top honors including 1st place in Elocution (Prajwal J, Rupini H, Kavin Krishan, Dakshraj) and 1st & 3rd places in the Ideathon category.",
-        images: ["/img3.jpg"],
+        images: [
+          "/events_2025/event_11/20250908_081130.jpg",
+          "/events_2025/event_11/IMG_7074.jpg",
+          "/events_2025/event_11/IMG_E7189.JPG",
+          "/events_2025/event_11/IMG_E7197.JPG"
+        ],
         highlights: [
           "1st Place in Elocution Competition",
           "1st & 3rd Place in Ideathon Innovation Challenge",
@@ -455,7 +622,11 @@ export const eventsByYear = {
         location: "Chennai, Tamil Nadu",
         shortDesc: "Industrial visit to ICF Chennai to study railway coach manufacturing, advanced fabrication, and Vande Bharat production lines.",
         fullDesc: "Students visited the world-renowned Integral Coach Factory (ICF) in Chennai. The industrial tour provided firsthand observation of heavy railway coach assembly, robotic welding, bogie fabrication, quality testing, and Vande Bharat express train manufacturing.",
-        images: ["/img3.jpg"],
+        images: [
+          "/events_2025/event_12/IMG-20240517-WA0070.jpg",
+          "/events_2025/event_12/IMG-20240524-WA0055.jpg",
+          "/events_2025/event_12/IMG-20240524-WA0103.jpg"
+        ],
         highlights: [
           "Exclusive tour of Vande Bharat manufacturing bays",
           "Study of heavy mechanical fabrication & industrial robotics",
@@ -472,7 +643,10 @@ export const eventsByYear = {
         location: "SPARK Media Studio",
         shortDesc: "Flagship campus podcast connecting faculty, student leaders, and campus clubs (Club Connect series got 1,900+ views).",
         fullDesc: "'The Insight' is SPARK's flagship media initiative bridging faculty and students. Episodes feature in-depth interviews with Principal Dr. K.N. Subramanya, Vice Principal Dr. K.S. Geetha, Dean of Cultural Affairs, and heads of campus clubs.",
-        images: ["/img4.jpg"],
+        images: [
+          "/events_2025/event_13/EP 1.jpg",
+          "/events_2025/event_13/pod_3.jpg"
+        ],
         highlights: [
           "Exclusive interview episodes with RVCE Principal & Vice Principal",
           "Club Connect series promoting student initiatives across campus",
@@ -489,7 +663,11 @@ export const eventsByYear = {
         location: "Kaiga, Karnataka",
         shortDesc: "Industrial visit to Kaiga Atomic Power Station studying nuclear energy systems, reactor safety, and power grid distribution.",
         fullDesc: "A specialized industrial visit to the Kaiga Nuclear Power Plant in Uttara Kannada. Students gained firsthand insights into nuclear reactor operations, heavy water coolant systems, radiological safety protocols, and large-scale power generation.",
-        images: ["/kaalnirnay.png"],
+        images: [
+          "/events_2025/event_14/kaiga_1.JPG",
+          "/events_2025/event_14/kaiga_2.JPG",
+          "/events_2025/event_14/kaiga_3.jpg"
+        ],
         highlights: [
           "Technical walkthrough of nuclear reactor control systems",
           "Safety protocols and environmental monitoring protocols",
@@ -505,20 +683,99 @@ export const eventsByYear = {
     year: "2026",
     tagline: "Upcoming Vision & Future Roadmap",
     description: "Looking ahead: Deep-tech system integration, international student exchanges, and expanded community impact.",
-    status: "placeholder",
+    status: "active",
     events: [
       {
-        id: "2026-placeholder-1",
-        title: "2026 Vision & Scheduled Initiatives",
-        tag: "Upcoming",
-        date: "2026 Academic Year",
-        location: "RVCE Campus & Beyond",
-        shortDesc: "This section is reserved for the 2026 SPARK core team to list upcoming hackathons, workshops, and project showcases.",
-        fullDesc: "The 2026 roadmap is under active planning. Team leads can add upcoming 2026 events, registration links, and promotional media.",
-        images: ["/hero.png"],
-        highlights: ["Expanded Deep-Tech Hardware Workshops", "Global IUCEE Student Exchange", "Integrated AI & Embedded Labs"],
-        speakers: ["Incoming SPARK 2026 Core Team"],
-        stats: { plannedEvents: "15+", targetReach: "1000+ Students" }
+        id: "usrc-visit-2026",
+        title: "USRC Visit",
+        tag: "Industrial Visit",
+        date: "25/06/26",
+        location: "To be updated",
+        shortDesc: "An educational visit to U R Rao Satellite Centre (URSC), Bengaluru, giving students firsthand exposure to satellite technology, space research, and ISRO's work culture.",
+        fullDesc: "As part of SPARK IUCEE RVCE Student Chapter activities, an industrial visit to the U R Rao Satellite Centre (URSC), Bengaluru, was organized for first- and second-year students from multiple engineering branches. The visit bridged classroom learning with real-world practice by introducing students to satellite technology, spacecraft development, space research, and key achievements of ISRO. Students had the opportunity to interact with ISRO scientists, observe advanced satellite models, and understand ongoing and future space missions while gaining insight into professional research workflows. The visit aimed to strengthen understanding of satellite applications in communication, navigation, Earth observation, meteorology, and scientific research, while inspiring innovation, higher research interest, and career aspirations in space science and engineering.",
+        images: [
+          "/events_2026/usrc-visit-2026/usrc-visit-2026_1.jpg",
+          "/events_2026/usrc-visit-2026/usrc-visit-2026_2.jpg",
+          "/events_2026/usrc-visit-2026/usrc-visit-2026_3.jpg",
+          "/events_2026/usrc-visit-2026/usrc-visit-2026_4.jpg",
+          "/events_2026/usrc-visit-2026/usrc-visit-2026_5.jpg",
+          "/events_2026/usrc-visit-2026/usrc-visit-2026_6.jpg",
+          "/events_2026/usrc-visit-2026/usrc-visit-2026_7.jpg",
+          "/events_2026/usrc-visit-2026/usrc-visit-2026_8.jpg"
+        ],
+        highlights: ["Industrial exposure", "Student participation", "Experiential learning"],
+        speakers: ["To be announced"],
+        drivePhotos: "https://drive.google.com/drive/folders/1w-aqwvYjho1lin5z_XxU3yv7yW0Hxyd2?usp=drive_link",
+        stats: { status: "Content pending" }
+      },
+      {
+        id: "creative-media-workshop-2026",
+        title: "Creative Media Workshop",
+        tag: "Learning & Development",
+        date: "27/05/26",
+        location: "RVCE Campus",
+        shortDesc: "A practical workshop under SPARK that trained students in graphic design, visual communication, and digital media production using industry-relevant tools.",
+        fullDesc: "The Creative Media Workshop 2026 was organized by INCLUB under the SPARK initiative to equip students with practical skills in graphic design, visual communication, and digital media production. Designed to bridge creativity and technology, the workshop emphasized hands-on learning over theory and introduced participants to industry-relevant tools used by designers, content creators, marketers, and media professionals. Through live demonstrations, guided activities, assignments, and interactive discussions, students explored Canva for graphic design and DaVinci Resolve for media editing while building technical competence and creative confidence. The event attracted students interested in branding, social media management, photography, video editing, and content creation, and helped them understand planning strategies and creative decision-making required to produce professional-quality multimedia content.",
+        images: [
+          "/events_2026/creative-media-workshop-2026/creative-media-workshop-2026_1.jpg",
+          "/events_2026/creative-media-workshop-2026/creative-media-workshop-2026_2.jpg",
+          "/events_2026/creative-media-workshop-2026/creative-media-workshop-2026_3.jpg",
+          "/events_2026/creative-media-workshop-2026/creative-media-workshop-2026_4.jpg",
+          "/events_2026/creative-media-workshop-2026/creative-media-workshop-2026_5.jpg",
+          "/events_2026/creative-media-workshop-2026/creative-media-workshop-2026_6.jpg"
+        ],
+        highlights: ["Creative media skill-building", "Workshop-based learning", "Student participation"],
+        speakers: ["To be announced"],
+        drivePhotos: "https://drive.google.com/drive/folders/1_MfipJa--MALjjBVZrU5GIlbvA9Rnhce?usp=sharing",
+        stats: { status: "Content pending" }
+      },
+      {
+        id: "sustainathon-2026-27",
+        title: "Sustainathon 2026-27",
+        tag: "Events & Competitions",
+        date: "14-15/05/2026",
+        location: "RVCE Campus",
+        shortDesc: "A two-day sustainability hackathon at RVCE where 1500+ students built technology-driven solutions aligned with the UN Sustainable Development Goals.",
+        fullDesc: "SUSTAIN-A-THON 2026 was a two-day hackathon organized by RV College of Engineering to encourage students to develop innovative and sustainable technology solutions aligned with the UN Sustainable Development Goals (SDGs). Participants worked on real-world sustainability challenges using AI, IoT, data analytics, web and mobile applications, and AR/VR technologies. The event saw 1500+ student participants and was executed through large-scale coordination involving 95+ faculty and internal evaluators, 22 external evaluators, 33 venues, 30 organizers, and 45 student event support members. Through mentoring, evaluations, presentations, and prototype development, teams gained hands-on exposure to innovation ecosystems, industry-oriented thinking, and practical problem-solving. The inauguration session emphasized sustainability-driven innovation, interdisciplinary collaboration, and the importance of building feasible, impactful, and socially relevant SDG-focused solutions.",
+        images: [
+          "/events_2026/sustainathon-2026-27/sustainathon-2026-27_1.jpg",
+          "/events_2026/sustainathon-2026-27/sustainathon-2026-27_2.jpg",
+          "/events_2026/sustainathon-2026-27/sustainathon-2026-27_3.jpg",
+          "/events_2026/sustainathon-2026-27/sustainathon-2026-27_4.jpg",
+          "/events_2026/sustainathon-2026-27/sustainathon-2026-27_5.jpg",
+          "/events_2026/sustainathon-2026-27/sustainathon-2026-27_6.jpg",
+          "/events_2026/sustainathon-2026-27/sustainathon-2026-27_7.jpg",
+          "/events_2026/sustainathon-2026-27/sustainathon-2026-27_8.jpg"
+        ],
+        highlights: ["Sustainability-focused challenge", "Student team participation", "Report-based details pending"],
+        speakers: ["To be announced"],
+        drivePhotos: "https://drive.google.com/drive/folders/1XAAIe9WNkLPzotzbLgIEO4wLVSsSGq7j?usp=drive_link",
+        docReport: "https://drive.google.com/file/d/1wzJABl4lGwAj3cL9ABae4tD5mFSh2R6E/view?usp=sharing",
+        stats: { status: "Report content pending" }
+      },
+      {
+        id: "mun-2026",
+        title: "MUN",
+        tag: "Events & Competitions",
+        date: "09/04/2026",
+        location: "RVCE Campus",
+        shortDesc: "SPARK MUN 2026 provided a diplomatic debate platform focused on women empowerment, policy dialogue, and collaborative global problem-solving.",
+        fullDesc: "The Model United Nations Conference 2026 was organized by SPARK, RV College of Engineering, to create a platform for diplomatic discussion, policy-oriented debate, and collaborative problem-solving on socially relevant global issues. Centered on the theme of women empowerment, the conference encouraged delegates to examine gender rights, healthcare accessibility, and technological inclusion through structured parliamentary procedure and committee deliberations. The event provided practical exposure to diplomacy, negotiation, public speaking, and resolution drafting while promoting respectful dialogue, analytical thinking, and student leadership. The conference featured active participation from delegates across departments and included three committees: Women Rights and Protection Against Gender-Based Violence, Technology and Gender: Bridging the Digital Divide, and Gender and Health: Access to Healthcare and Reproductive Rights. Guided by Executive Board members, committee sessions were conducted through moderated debate, caucuses, and voting procedures with a strong focus on constructive policy outcomes.",
+        images: [
+          "/events_2026/mun-2026/mun-2026_1.jpg",
+          "/events_2026/mun-2026/mun-2026_2.jpg",
+          "/events_2026/mun-2026/mun-2026_3.jpg",
+          "/events_2026/mun-2026/mun-2026_4.jpg",
+          "/events_2026/mun-2026/mun-2026_5.jpg",
+          "/events_2026/mun-2026/mun-2026_6.jpg",
+          "/events_2026/mun-2026/mun-2026_7.jpg",
+          "/events_2026/mun-2026/mun-2026_8.jpg"
+        ],
+        highlights: ["Model UN participation", "Collaborative debate format", "Report-based details pending"],
+        speakers: ["To be announced"],
+        drivePhotos: "https://drive.google.com/drive/folders/1z8hoL3XmCvjghEHQBgs9ZKuNKMTnMI3p?usp=sharing",
+        docReport: "https://drive.google.com/file/d/1ytvqBTrZWF-jH-Xal85WR92bOWZBZt0x/view?usp=sharing",
+        stats: { status: "Report content pending" }
       }
     ]
   }

@@ -154,11 +154,11 @@ const EventsAndActivities = () => {
                       {y === '2023'
                          ? '8 Events'
                        : y === '2024'
-                        ? '14 Events'
+                        ? '13 Events'
                        : y === '2025'
                         ? '14 Events'
                         : y === '2026'
-                        ? 'Upcoming'
+                        ? '4 Events'
                         : 'Archive'}
                     </span>
                   </div>
