@@ -57,12 +57,41 @@ const EventsAndActivities = () => {
   const currentYearData = eventsByYear[selectedYear] || eventsByYear['2025'];
   const allEvents = currentYearData.events;
 
+  const canonicalTags = ['Events & Competitions', 'Outreach & Impact', 'Learning & Development'];
+  const isStrictFilterYear = selectedYear !== '2024';
+
+  const getCanonicalTag = (tag = '', eventId = '') => {
+    if (eventId === 'success-knowing-thyself-2023' || eventId === 'nexgen-entrepreneurship-2023') {
+      return 'Learning & Development';
+    }
+
+    const normalized = tag.toLowerCase();
+
+    if (normalized.includes('outreach') || normalized.includes('impact') || normalized.includes('empowerment') || normalized.includes('industrial visit') || normalized.includes('industry visit')) {
+      return 'Outreach & Impact';
+    }
+
+    if (normalized.includes('learning') || normalized.includes('development') || normalized.includes('industry connect') || normalized.includes('cybersecurity') || normalized.includes('deep-tech') || normalized.includes('quantum') || normalized.includes('orientation') || normalized.includes('mentorship') || normalized.includes('podcast')) {
+      return 'Learning & Development';
+    }
+
+    return 'Events & Competitions';
+  };
+
   // Unique tags for active year
-  const availableTags = ['All', ...new Set(allEvents.map(e => e.tag))];
+  const availableTags = isStrictFilterYear
+    ? ['All', ...canonicalTags]
+    : ['All', ...new Set(allEvents.map(e => e.tag))];
 
   const filteredEvents = selectedTag === 'All' 
     ? allEvents 
-    : allEvents.filter(e => e.tag === selectedTag);
+    : allEvents.filter(e => {
+        if (isStrictFilterYear) {
+          return getCanonicalTag(e.tag, e.id) === selectedTag;
+        }
+
+        return e.tag === selectedTag;
+      });
 
   const openModal = (event) => {
     setActiveEventModal(event);
@@ -445,6 +474,20 @@ const EventsAndActivities = () => {
                       {activeEventModal.fullDesc}
                     </p>
                   </div>
+
+                  {activeEventModal.docReport && (
+                    <div className="flex flex-wrap gap-3">
+                      <a
+                        href={activeEventModal.docReport}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 rounded-xl bg-sparkBlue px-4 py-2.5 text-sm font-bold text-white shadow-md transition hover:bg-sparkBlue/90"
+                      >
+                        <FileText size={16} />
+                        View Report
+                      </a>
+                    </div>
+                  )}
 
                   {/* Highlights / Key Outcomes */}
                   {activeEventModal.highlights && activeEventModal.highlights.length > 0 && (
