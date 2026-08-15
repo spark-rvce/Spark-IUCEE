@@ -161,9 +161,9 @@ export const eventsByYear = {
               location: "RVCE Campus",
               shortDesc: "A World Environment Day initiative centred around environmental awareness and the #BeatPlasticPollution theme.",
               fullDesc: "The Environment Day activity encouraged students to engage with environmental issues through a quiz centred around the theme #BeatPlasticPollution.",
-              images: [
-                "/events_2023/environment-day/img__1.jpg",
-                "/events_2023/environment-day/img_2.jpg"
+              images: ["/events_2023/environment-day/img_2.jpg",
+                "/events_2023/environment-day/img__1.jpg"
+                
               ],
               highlights: [
                 "World Environment Day initiative",
@@ -228,7 +228,7 @@ export const eventsByYear = {
               location: "IEM Auditorium, RVCE",
               shortDesc: "Hosted a LinkedIn session attended by 60 first-year students with SPARK 2022 batch alumni sharing insights.",
               fullDesc: "Hosted a LinkedIn session at the IEM Auditorium, attended by 60 first-year students. The SPARK 2022 batch alumni shared insights on building profiles, networking, and career opportunities. Students actively engaged, making the session highly interactive and beneficial.",
-              images: ["/linkedin_1.jpg", "/linkedin_2.jpg"],
+              images: ["/linkedin_2.jpg","/linkedin_1.jpg",],
               highlights: ["SPARK 2022 batch alumni speakers", "Interactive profile building & review", "Networking & career path guidance", "60 first-year students attended"],
               speakers: ["SPARK 2022 Batch Alumni"],
               docReport: "https://docs.google.com/document/d/19d3sAkXD6eG4VZOAdS2zOtMj0u1yyl9l-jTYjzNkf_w/edit?tab=t.0",
@@ -242,7 +242,7 @@ export const eventsByYear = {
               location: "RVCE Campus",
               shortDesc: "A two-round photography competition promoting awareness of the UN SDGs through creative visual storytelling.",
               fullDesc: "A two-round photography competition that promoted awareness of the UN Sustainable Development Goals through creative visual storytelling, encouraging observation, creativity, critical thinking, and sustainability awareness among participants.",
-              images: ["/sdg_1.jpg", "/sdg_2.jpg", "/sdg_3.jpg", "/sdg_4.jpg"],
+              images: ["/sdg_4.jpg", "/sdg_2.jpg", "/sdg_3.jpg", "/sdg_1.jpg"],
               highlights: ["Two-round photography competition", "Promoted UN Sustainable Development Goals", "Creative visual storytelling", "Encouraged observation and critical thinking"],
               speakers: ["SDG Advocates & Photography Jury"],
               drivePhotos: "https://drive.google.com/drive/folders/14YImsKp9YrANxa5jujlN-lK5C7SS_NOj",
@@ -257,7 +257,7 @@ export const eventsByYear = {
               location: "RVCE Campus",
               shortDesc: "Idea-presentation event promoting SDG innovation among 1st & 2nd year students.",
               fullDesc: "An idea presentation event that promoted innovation and sustainable development among first- and second-year students. Organized by the SPARK IUCEE RVCE Student Chapter in collaboration with Agastya Foundation and Samsung, this event provided a platform for students to present solutions aligned with Sustainable Development Goals (SDGs). 16 teams participated, showcasing their projects to a panel of distinguished judges.",
-              images: ["/mini_anveshana_1.jpg", "/mini_anveshana_2.jpg"],
+              images: ["/mini_anveshana_2.jpg", "/mini_anveshana_1.jpg"],
               highlights: ["16 teams participated and presented", "Partnered with Agastya Foundation & Samsung", "Focused on UN SDGs", "Platform for 1st & 2nd year students"],
               speakers: ["Agastya Foundation & Samsung Panel Judges"],
               stats: { teams: "16 Teams", target: "1st & 2nd Year Students" }
@@ -457,7 +457,8 @@ export const eventsByYear = {
               images: [
                 "/events_2025/event_8/ms1.jpeg",
                 "/events_2025/event_8/ms3.jpeg",
-                "/events_2025/event_8/ms4.jpeg"
+                "/events_2025/event_8/ms4.jpeg",
+                "/events_2025/event_8/ms2.jpg"
               ],
               highlights: [
                 "Multi-stage algorithmic & logical puzzle checkpoints",
@@ -653,9 +654,9 @@ export const eventsByYear = {
               shortDesc: "Industrial visit to Kaiga Atomic Power Station studying nuclear energy systems, reactor safety, and power grid distribution.",
               fullDesc: "A specialized industrial visit to the Kaiga Nuclear Power Plant in Uttara Kannada. Students gained firsthand insights into nuclear reactor operations, heavy water coolant systems, radiological safety protocols, and large-scale power generation.",
               images: [
-                "/events_2025/event_14/kaiga_1.JPG",
+                "/events_2025/event_14/kaiga_3.jpg",
                 "/events_2025/event_14/kaiga_2.JPG",
-                "/events_2025/event_14/kaiga_3.jpg"
+                "/events_2025/event_14/kaiga_1.JPG"
               ],
               highlights: [
                 "Technical walkthrough of nuclear reactor control systems",
@@ -725,6 +726,7 @@ export const eventsByYear = {
         shortDesc: "An educational visit to U R Rao Satellite Centre (URSC), Bengaluru, giving students firsthand exposure to satellite technology, space research, and ISRO's work culture.",
         fullDesc: "As part of SPARK IUCEE RVCE Student Chapter activities, an industrial visit to the U R Rao Satellite Centre (URSC), Bengaluru, was organized for first- and second-year students from multiple engineering branches. The visit bridged classroom learning with real-world practice by introducing students to satellite technology, spacecraft development, space research, and key achievements of ISRO. Students had the opportunity to interact with ISRO scientists, observe advanced satellite models, and understand ongoing and future space missions while gaining insight into professional research workflows. The visit aimed to strengthen understanding of satellite applications in communication, navigation, Earth observation, meteorology, and scientific research, while inspiring innovation, higher research interest, and career aspirations in space science and engineering.",
         images: [
+          "/events_2026/usrc-visit-2026/usrc-visit-2026_0.jpeg",
           "/events_2026/usrc-visit-2026/usrc-visit-2026_1.jpg",
           "/events_2026/usrc-visit-2026/usrc-visit-2026_5.jpg",
           "/events_2026/usrc-visit-2026/usrc-visit-2026_7.jpg"
