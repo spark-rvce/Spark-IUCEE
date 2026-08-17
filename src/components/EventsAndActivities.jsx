@@ -81,7 +81,7 @@ const EventsAndActivities = () => {
   // Unique tags for active year
   const availableTags = isStrictFilterYear
     ? ['All', ...canonicalTags]
-    : ['All', ...new Set(allEvents.map(e => e.tag))];
+    : ['All', ...canonicalTags.filter(tag => allEvents.some(e => e.tag === tag))];
 
   const filteredEvents = selectedTag === 'All' 
     ? allEvents 
@@ -115,7 +115,7 @@ const EventsAndActivities = () => {
         <Reveal>
           <div className="text-center max-w-3xl mx-auto mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sparkBlue/5 border border-sparkBlue/10 text-sparkBlue text-xs font-bold uppercase tracking-widest mb-4">
-              <Sparkles size={14} className="text-sparkAccent" /> SPARK Timeline & Archives
+              <Sparkles size={0} className="text-sparkAccent" /> SPARK Timeline & Archives
             </div>
             <h2 className="text-4xl md:text-6xl font-black text-sparkBlue leading-tight mb-4">
               Activities & Events

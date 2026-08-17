@@ -557,7 +557,7 @@ export const eventsByYear = {
       {
               id: "avishkar-manthan-2025",
               title: "Avishkar Manthan & National Project Expo",
-              tag: "National Competition",
+              tag: "Outreach & Impact",
               date: "11th September 2025",
               location: "Statewide / RVCE Representation",
               shortDesc: "SPARK team members won 1st place in Elocution and 1st & 3rd place in Ideathon at Avishkar Manthan.",
