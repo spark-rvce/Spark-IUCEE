@@ -265,7 +265,7 @@ export const eventsByYear = {
       {
               id: "aunsf-2024",
               title: "AUNSF 2.0-2024",
-              tag: "Events & Competitions",
+              tag: "Events & Competitions",//look here
               date: "June 2024",
               location: "Hyderabad",
               shortDesc: "A visit to Hyderabad featuring an intensive 3-level ideathon at AUNSF 2.0.",
@@ -323,7 +323,7 @@ export const eventsByYear = {
       {
               id: "empowher-2024",
               title: "EmpowHer – Women's Day",
-              tag: "Outreach & Impact",
+              tag: "Learning & Development",
               date: "7th March 2024",
               location: "RVCE Campus",
               shortDesc: "An event held on the occasion of Women's Day celebrating women leaders in tech.",
@@ -557,7 +557,7 @@ export const eventsByYear = {
       {
               id: "avishkar-manthan-2025",
               title: "Avishkar Manthan & National Project Expo",
-              tag: "Outreach & Impact",
+              tag: "Events & Competitions",
               date: "11th September 2025",
               location: "Statewide / RVCE Representation",
               shortDesc: "SPARK team members won 1st place in Elocution and 1st & 3rd place in Ideathon at Avishkar Manthan.",
@@ -718,10 +718,78 @@ export const eventsByYear = {
     status: "active",
     events: [
       {
+        id: "student-induction-programme-2026",
+        title: "Student Induction Programme 2026",
+        tag: "Events & Competitions",
+        date: "28/08/2026",
+        location: "CE 314",      
+        shortDesc: "A 4-part, 45-minute induction series covering startup thinking, digital skills, innovation, and puzzle-solving for incoming students.",
+        fullDesc: "As part of the Student Induction Programme 2026, four back-to-back 45-minute sessions were conducted at CE 205 to introduce new students to innovation, entrepreneurship, digital readiness, and teamwork through an activity-driven format. 'Mission: Impossible? – Build. Adapt. Pitch.' had participants pick random problems, technologies, audiences, and wildcards to build a startup idea on the spot, then pitch it in a gallery-style showdown. The 'Digital Launchpad Masterclass' covered building a LinkedIn profile, unlocking benefits through college email, and using AI tools for academic productivity. 'Stations of an Innovator' guided students through five stations — ideation, prototyping, pitching, an Impact Wall, and exploring the club's work. 'Decode.exe' closed the programme with a two-station puzzle challenge where teams combined clues to crack a final winning key. Together, the sessions offered a hands-on, gamified introduction to innovation and professional readiness.",
+        images: [
+          "/events_2026/student-induction-programme-2026/SIP_1.jpg",
+          "/events_2026/student-induction-programme-2026/SIP_2.jpg",
+          "/events_2026/student-induction-programme-2026/SIP_3.jpg",
+          "/events_2026/student-induction-programme-2026/SIP_4.jpg",
+          "/events_2026/student-induction-programme-2026/SIP_5.png"
+        ],
+        highlights: [
+          "4 interactive sessions, 45 mins each",
+          "Startup pitching & prototyping",
+          "Digital skills & AI literacy",
+          "Puzzle-based team challenges"
+        ],
+        speakers: ["SPARK Team"],
+        drivePhotos: "https://drive.google.com/drive/folders/1wsgRK4uDNun2Ye_DhmQZ3t23_YXY7NJL",
+        docReport: "To be updated",
+        stats: {
+          sessions: "4",
+          durationPerSession: "45 minutes",
+          format: "Interactive, station-based & pitch-driven",
+          status: "Completed"
+        },
+        subEvents: [
+          {
+            name: "Mission: Impossible? – Build. Adapt. Pitch.",
+            desc: "Random-prompt startup building with memory challenges and a gallery-style pitch showdown."
+          },
+          {
+            name: "Digital Launchpad Masterclass",
+            desc: "LinkedIn profile building, college email benefits, and leveraging AI for productivity."
+          },
+          {
+            name: "Stations of an Innovator",
+            desc: "Five-station journey through ideation, prototyping, pitching, impact-sharing, and club exploration."
+          },
+          {
+            name: "Decode.exe",
+            desc: "Two-station decoding challenge combining clues into a final winning key."
+          }
+        ]
+      },
+      {
+        id: "Arduino_workshop",
+        title: "Arduino Proficiency Certification",
+        tag: "Learning & Development",
+        date: "19/06/26 - 15/08/26",
+        location: "RVCE Campus",
+        shortDesc: "A hands-on Arduino and embedded systems program under SPARK, where students completed guided experiments and earned the IEEE SSCS Micro-Controller Proficiency Certificate.",
+        fullDesc: "As part of SPARK IUCEE RVCE Student Chapter activities, students were made aware of the IEEE SSCS Arduino Contest – Smart Solutions for Daily Challenges, a global competition organized by the IEEE Solid-State Circuits Society focused on Arduino programming and embedded system development. Participants were guided through structured, tutorial-based experimentation covering microcontrollers, sensors, actuators, and electronic interfacing. Students completed at least 10 of the 16 prescribed experiments spanning software setup, digital and analog interfacing, displays, motors, and sensor applications — including digital and analog I/O, PWM outputs, DC and servo motors, 7-segment and LCD displays, piezo buzzers, keypads, and light, temperature, distance, infrared, and tilt sensors. Each experiment involved circuit assembly, program execution, output verification, and video demonstration for submission through the contest platform. The initiative strengthened participants' practical skills in circuit building, debugging, and real-time hardware-software interaction, while fostering creativity and confidence in embedded systems. Five students successfully completed the program and were awarded the IEEE SSCS Micro-Controller Proficiency Certificate.",
+        images: [
+          "/events_2026/arduino-workshop/Arduino_1.jpeg",
+          "/events_2026/arduino-workshop/Arduino_2.jpeg"
+        ],
+        highlights: ["students certified", "Hands-on embedded systems training", "IEEE SSCS global recognition"],
+        speakers: ["To be announced"],
+        drivePhotos: "https://drive.google.com/drive/folders/1KXzJ39ta3s6HxLpbNiIvEmTRXrSxTL0n",
+        docReport : "https://drive.google.com/file/d/1LnCJgaTzTAbaFCx3O_5yu8cxxAcGJxqV/view?usp=drivesdk",
+        stats: {participants: "13 Students", duration: "19th June 2026 – 15th August 2026",
+    experimentsCompleted: "10 of 16 prescribed experiments", certification: "IEEE SSCS Micro-Controller Proficiency Certificate"}
+      },
+      {
         id: "usrc-visit-2026",
         title: "USRC Visit",
         tag: "Industrial Visit",
-        date: "25/06/26",
+        date: "25/06/26", 
         location: "To be updated",
         shortDesc: "An educational visit to U R Rao Satellite Centre (URSC), Bengaluru, giving students firsthand exposure to satellite technology, space research, and ISRO's work culture.",
         fullDesc: "As part of SPARK IUCEE RVCE Student Chapter activities, an industrial visit to the U R Rao Satellite Centre (URSC), Bengaluru, was organized for first- and second-year students from multiple engineering branches. The visit bridged classroom learning with real-world practice by introducing students to satellite technology, spacecraft development, space research, and key achievements of ISRO. Students had the opportunity to interact with ISRO scientists, observe advanced satellite models, and understand ongoing and future space missions while gaining insight into professional research workflows. The visit aimed to strengthen understanding of satellite applications in communication, navigation, Earth observation, meteorology, and scientific research, while inspiring innovation, higher research interest, and career aspirations in space science and engineering.",
