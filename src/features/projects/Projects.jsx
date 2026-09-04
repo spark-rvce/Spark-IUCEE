@@ -10,6 +10,23 @@ const Projects = () => {
     setSelectedProject(null);
   };
 
+  // Group projects by year and sort
+  const projectsByYear = projectsData.reduce((acc, project) => {
+    const year = project.year || 'No Year Specified';
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+    acc[year].push(project);
+    return acc;
+  }, {});
+
+  // Sort years in descending order
+  const sortedYears = Object.keys(projectsByYear).sort((a, b) => {
+    if (a === 'No Year Specified') return 1;
+    if (b === 'No Year Specified') return -1;
+    return b - a;
+  });
+
   return (
     <PageShell
       title="Projects & Innovations"
@@ -20,66 +37,81 @@ const Projects = () => {
 
           {/* Page Introduction */}
           <div className="mb-12 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-wider text-sparkBlue">
+            <p className="text-sm font-semibold uppercase tracking-wider text-navy-700">
               {projectsData.length} Projects
             </p>
 
-            <h2 className="mt-3 text-3xl font-bold text-slate-900 md:text-4xl">
+            <h2 className="mt-3 text-3xl font-bold text-navy-900 md:text-4xl">
               Student Innovations
             </h2>
 
-            <p className="mt-4 text-slate-600">
+            <p className="mt-4 text-navy-700">
               Explore innovative projects, research initiatives, and engineering
               solutions developed by SPARK students.
             </p>
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {projectsData.map((project) => (
-              <article
-                key={project.id}
-                className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-sparkAccent/30"
-              >
-                {/* Category and Year */}
-                <div className="flex items-start justify-between gap-4">
-                  <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-sparkBlue">
-                    {project.category}
-                  </span>
-
-                  <span className="shrink-0 text-sm font-medium text-slate-500">
-                    {project.year}
-                  </span>
-                </div>
-
-                {/* Project Title */}
-                <h3 className="mt-5 text-xl font-bold leading-snug text-slate-900 transition-colors duration-300 group-hover:text-sparkAccent">
-                  {project.title}
+          {/* Projects Grouped by Year */}
+          {sortedYears.map((year) => (
+            <div key={year} className="mb-16">
+              {/* Year Header */}
+              <div className="mb-6 border-b-2 border-navy-200 pb-3">
+                <h3 className="text-2xl font-bold text-navy-900 md:text-3xl">
+                  {year}
                 </h3>
-
-                {/* Theme */}
-                {project.theme && (
-                  <p className="mt-3 text-sm font-medium text-sparkBlue">
-                    {project.theme}
-                  </p>
-                )}
-
-                {/* Summary */}
-                <p className="mt-4 line-clamp-4 text-sm leading-relaxed text-slate-600">
-                  {project.summary}
+                <p className="mt-1 text-sm text-navy-600">
+                  {projectsByYear[year].length} {projectsByYear[year].length === 1 ? 'Project' : 'Projects'}
                 </p>
+              </div>
 
-                {/* View Project */}
-                <button
-                  type="button"
-                  onClick={() => setSelectedProject(project)}
-                  className="mt-auto pt-6 text-left font-semibold text-sparkBlue transition-colors duration-300 hover:opacity-70 group-hover:text-sparkAccent"
-                >
-                  View Project →
-                </button>
-              </article>
-            ))}
-          </div>
+              {/* Projects Grid */}
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {projectsByYear[year].map((project) => (
+                  <article
+                    key={project.id}
+                    className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-sparkAccent/30"
+                  >
+                    {/* Category and Year */}
+                    <div className="flex items-start justify-between gap-4">
+                      <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-navy-700">
+                        {project.category}
+                      </span>
+
+                      <span className="shrink-0 text-sm font-medium text-navy-600">
+                        {project.year || 'N/A'}
+                      </span>
+                    </div>
+
+                    {/* Project Title */}
+                    <h3 className="mt-5 text-xl font-bold leading-snug text-slate-900 transition-colors duration-300 group-hover:text-sparkAccent">
+                      {project.title}
+                    </h3>
+
+                    {/* Theme */}
+                    {project.theme && (
+                      <p className="mt-3 text-sm font-medium text-navy-700">
+                        {project.theme}
+                      </p>
+                    )}
+
+                    {/* Summary */}
+                    <p className="mt-4 line-clamp-4 text-sm leading-relaxed text-navy-700">
+                      {project.summary}
+                    </p>
+
+                    {/* View Project */}
+                    <button
+                      type="button"
+                      onClick={() => setSelectedProject(project)}
+                      className="mt-auto pt-6 text-left font-semibold text-sparkBlue transition-colors duration-300 hover:opacity-70 group-hover:text-sparkAccent"
+                    >
+                      View Project →
+                    </button>
+                  </article>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -114,34 +146,34 @@ const Projects = () => {
 
             {/* Category and Year */}
             <div className="flex flex-wrap items-center gap-3 pr-10">
-              <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-sparkBlue">
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-navy-700">
                 {selectedProject.category}
               </span>
 
-              <span className="text-sm font-medium text-slate-500">
-                {selectedProject.year}
+              <span className="text-sm font-medium text-navy-600">
+                {selectedProject.year || 'N/A'}
               </span>
             </div>
 
             {/* Title */}
-            <h2 className="mt-5 text-2xl font-bold leading-tight text-slate-900 md:text-4xl">
+            <h2 className="mt-5 text-2xl font-bold leading-tight text-navy-900 md:text-4xl">
               {selectedProject.title}
             </h2>
 
             {/* Theme */}
             {selectedProject.theme && (
-              <p className="mt-3 font-medium text-sparkBlue">
+              <p className="mt-3 font-medium text-navy-700">
                 {selectedProject.theme}
               </p>
             )}
 
             {/* Description */}
             <div className="mt-10">
-              <h3 className="text-xl font-bold text-slate-900">
+              <h3 className="text-xl font-bold text-navy-900">
                 About the Project
               </h3>
 
-              <p className="mt-4 whitespace-pre-line leading-8 text-slate-600">
+              <p className="mt-4 whitespace-pre-line leading-8 text-navy-700">
                 {selectedProject.description || selectedProject.summary}
               </p>
             </div>
@@ -150,7 +182,7 @@ const Projects = () => {
             {selectedProject.screenshots &&
               selectedProject.screenshots.length > 0 && (
                 <div className="mt-10">
-                  <h3 className="text-xl font-bold text-slate-900">
+                  <h3 className="text-xl font-bold text-navy-900">
                     Project Screenshots
                   </h3>
 
@@ -172,7 +204,7 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  <p className="mt-3 text-sm text-slate-500">
+                  <p className="mt-3 text-sm text-navy-600">
                     Click an image to view it in full size.
                   </p>
                 </div>
@@ -181,7 +213,7 @@ const Projects = () => {
             {/* Team Members */}
             {selectedProject.team && selectedProject.team.length > 0 && (
               <div className="mt-10">
-                <h3 className="text-xl font-bold text-slate-900">
+                <h3 className="text-xl font-bold text-navy-900">
                   Team Members
                 </h3>
 
@@ -189,7 +221,7 @@ const Projects = () => {
                   {selectedProject.team.map((member) => (
                     <div
                       key={member}
-                      className="rounded-lg bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700"
+                      className="rounded-lg bg-slate-50 px-4 py-3 text-sm font-medium text-navy-700"
                     >
                       {member}
                     </div>
@@ -201,11 +233,11 @@ const Projects = () => {
             {/* Mentor */}
             {selectedProject.mentor && (
               <div className="mt-10">
-                <h3 className="text-xl font-bold text-slate-900">
+                <h3 className="text-xl font-bold text-navy-900">
                   Mentor
                 </h3>
 
-                <p className="mt-3 text-slate-600">
+                <p className="mt-3 text-navy-700">
                   {selectedProject.mentor}
                 </p>
               </div>
@@ -215,7 +247,7 @@ const Projects = () => {
               {selectedProject.resources &&
                 selectedProject.resources.length > 0 && (
                   <div className="mt-10">
-                    <h3 className="text-xl font-bold text-slate-900">
+                    <h3 className="text-xl font-bold text-navy-900">
                       Project Resources
                     </h3>
 
@@ -226,7 +258,7 @@ const Projects = () => {
                           href={resource.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-sparkBlue transition hover:border-sparkBlue hover:bg-blue-50"
+                          className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-navy-700 transition hover:border-navy-700 hover:bg-blue-50"
                         >
                           📄 {resource.label}
                         </a>
