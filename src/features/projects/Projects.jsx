@@ -1,12 +1,406 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PageShell from '../../components/PageShell';
+import { projectsData } from '../../data/projectsData';
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    setSelectedImage(null);
+  };
+
+  // Search projects across multiple fields
+  const normalizedQuery = searchQuery.trim().toLowerCase();
+
+  const filteredProjects = projectsData.filter((project) => {
+    if (!normalizedQuery) return true;
+
+    const searchableText = [
+      project.title,
+      project.year,
+      project.category,
+      project.theme,
+      project.summary,
+      project.description,
+      project.mentor,
+      project.id,
+      ...(project.team || []),
+      ...(project.resources || []).map((resource) => resource.label),
+    ]
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase();
+
+    return searchableText.includes(normalizedQuery);
+  });
+
+  // Group filtered projects by year
+  const projectsByYear = filteredProjects.reduce((acc, project) => {
+    const year = project.year || 'No Year Specified';
+
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+
+    acc[year].push(project);
+    return acc;
+  }, {});
+
+  // Sort years in descending order
+  const sortedYears = Object.keys(projectsByYear).sort((a, b) => {
+    if (a === 'No Year Specified') return 1;
+    if (b === 'No Year Specified') return -1;
+    return b - a;
+  });
+
   return (
     <PageShell
       title="Projects & Innovations"
       subtitle="Explore student-led engineering projects, research studies, and prototypes."
-    />
+    >
+      <section className="bg-slate-50 px-6 py-16 md:py-24">
+        <div className="mx-auto max-w-7xl">
+
+          {/* Page Introduction + Search */}
+            <div className="mb-12 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+
+              {/* Introduction */}
+              <div className="max-w-3xl">
+                <p className="text-sm font-semibold uppercase tracking-wider text-navy-700">
+                  {filteredProjects.length} {filteredProjects.length === 1 ? 'Project' : 'Projects'}
+                  {searchQuery.trim() && ` Found`}
+                </p>
+
+                <h2 className="mt-3 text-3xl font-bold text-navy-900 md:text-4xl">
+                  Student Innovations
+                </h2>
+
+                <p className="mt-4 text-navy-700">
+                  Explore innovative projects, research initiatives, and engineering
+                  solutions developed by SPARK students.
+                </p>
+              </div>
+
+              {/* Search Bar */}
+              <div className="w-full lg:max-w-md">
+                <label
+                  htmlFor="project-search"
+                  className="mb-2 block text-sm font-semibold text-navy-900"
+                >
+                  Search Projects
+                </label>
+
+                <div className="relative">
+                  <input
+                    id="project-search"
+                    type="search"
+                    value={searchQuery}
+                    onChange={(event) => setSearchQuery(event.target.value)}
+                    placeholder="Search by project, year, team member, mentor..."
+                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 pr-12 text-sm text-slate-900 shadow-sm outline-none transition focus:border-sparkAccent focus:ring-2 focus:ring-sparkAccent/20"
+                  />
+
+                  {/* Search Icon */}
+                  <span
+                    className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-lg text-navy-500"
+                    aria-hidden="true"
+                  >
+                    🔍
+                  </span>
+                </div>
+
+                {/* Clear Search */}
+                {searchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => setSearchQuery('')}
+                    className="mt-2 text-sm font-medium text-navy-600 transition-colors hover:text-sparkAccent"
+                  >
+                    Clear search
+                  </button>
+                )}
+              </div>
+            </div>
+
+          {/* Projects Grouped by Year */}
+          {sortedYears.length > 0 ? (
+            sortedYears.map((year) => (
+              <div key={year} className="mb-16">
+                {/* Year Header */}
+                <div className="mb-6 border-b-2 border-navy-200 pb-3">
+                  <h3 className="text-2xl font-bold text-navy-900 md:text-3xl">
+                    {year}
+                  </h3>
+                  <p className="mt-1 text-sm text-navy-600">
+                    {projectsByYear[year].length} {projectsByYear[year].length === 1 ? 'Project' : 'Projects'}
+                  </p>
+                </div>
+
+                {/* Projects Grid */}
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {projectsByYear[year].map((project) => (
+                    <article
+                      key={project.id}
+                      className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-sparkAccent/30"
+                    >
+                      {/* Category and Year */}
+                      <div className="flex items-start justify-between gap-4">
+                        <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-navy-700">
+                          {project.category}
+                        </span>
+
+                        <span className="shrink-0 text-sm font-medium text-navy-600">
+                          {project.year || 'N/A'}
+                        </span>
+                      </div>
+
+                      {/* Project Title */}
+                      <h3 className="mt-5 text-xl font-bold leading-snug text-slate-900 transition-colors duration-300 group-hover:text-sparkAccent">
+                        {project.title}
+                      </h3>
+
+                      {/* Theme */}
+                      {project.theme && (
+                        <p className="mt-3 text-sm font-medium text-navy-700">
+                          {project.theme}
+                        </p>
+                      )}
+
+                      {/* Summary */}
+                      <p className="mt-4 line-clamp-4 text-sm leading-relaxed text-navy-700">
+                        {project.summary}
+                      </p>
+
+                      {/* View Project */}
+                      <button
+                        type="button"
+                        onClick={() => setSelectedProject(project)}
+                        className="mt-auto pt-6 text-left font-semibold text-sparkBlue transition-colors duration-300 hover:opacity-70 group-hover:text-sparkAccent"
+                      >
+                        View Project →
+                      </button>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="rounded-2xl border border-slate-200 bg-white px-6 py-16 text-center shadow-sm">
+            <div className="text-4xl">🔎</div>
+
+            <h3 className="mt-4 text-2xl font-bold text-navy-900">
+              No Projects Found
+            </h3>
+
+            <p className="mt-3 text-navy-600">
+              No projects match "
+              <span className="font-semibold text-navy-900">
+                {searchQuery}
+              </span>
+              ".
+            </p>
+
+            <button
+              type="button"
+              onClick={() => setSearchQuery('')}
+              className="mt-6 rounded-lg bg-sparkBlue px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-sparkAccent"
+            >
+              Clear Search
+            </button>
+          </div>
+        )}
+        </div>
+      </section>
+
+      {/* Project Modal */}
+      {selectedProject && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+          onClick={closeModal}
+        >
+          <div
+            className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl md:p-10"
+            onClick={(event) => event.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              type="button"
+              onClick={closeModal}
+              className="absolute right-5 top-5 text-3xl font-light leading-none text-slate-500 transition hover:text-slate-900"
+              aria-label="Close project details"
+            >
+              ×
+            </button>
+
+            {/* Image */}
+            {selectedProject.image && (
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="mb-8 h-64 w-full rounded-xl object-cover"
+              />
+            )}
+
+            {/* Category and Year */}
+            <div className="flex flex-wrap items-center gap-3 pr-10">
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-navy-700">
+                {selectedProject.category}
+              </span>
+
+              <span className="text-sm font-medium text-navy-600">
+                {selectedProject.year || 'N/A'}
+              </span>
+            </div>
+
+            {/* Title */}
+            <h2 className="mt-5 text-2xl font-bold leading-tight text-navy-900 md:text-4xl">
+              {selectedProject.title}
+            </h2>
+
+            {/* Theme */}
+            {selectedProject.theme && (
+              <p className="mt-3 font-medium text-navy-700">
+                {selectedProject.theme}
+              </p>
+            )}
+
+            {/* Description */}
+            <div className="mt-10">
+              <h3 className="text-xl font-bold text-navy-900">
+                About the Project
+              </h3>
+
+              <p className="mt-4 whitespace-pre-line leading-8 text-navy-700">
+                {selectedProject.description || selectedProject.summary}
+              </p>
+            </div>
+
+            {/* Project Screenshots */}
+            {selectedProject.screenshots &&
+              selectedProject.screenshots.length > 0 && (
+                <div className="mt-10">
+                  <h3 className="text-xl font-bold text-navy-900">
+                    Project Screenshots
+                  </h3>
+
+                  <div className="mt-5 grid gap-5 md:grid-cols-2">
+                    {selectedProject.screenshots.map((screenshot, index) => (
+                      <button
+                        key={screenshot.src || index}
+                        type="button"
+                        onClick={() => setSelectedImage(screenshot)}
+                        className="group overflow-hidden rounded-xl border border-slate-200 bg-slate-50 text-left"
+                      >
+                        <img
+                          src={screenshot.src}
+                          alt={screenshot.alt || `${selectedProject.title} screenshot`}
+                          className="h-auto w-full transition duration-300 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                      </button>
+                    ))}
+                  </div>
+
+                  <p className="mt-3 text-sm text-navy-600">
+                    Click an image to view it in full size.
+                  </p>
+                </div>
+              )}
+
+            {/* Team Members */}
+            {selectedProject.team && selectedProject.team.length > 0 && (
+              <div className="mt-10">
+                <h3 className="text-xl font-bold text-navy-900">
+                  Team Members
+                </h3>
+
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {selectedProject.team.map((member) => (
+                    <div
+                      key={member}
+                      className="rounded-lg bg-slate-50 px-4 py-3 text-sm font-medium text-navy-700"
+                    >
+                      {member}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Mentor */}
+            {selectedProject.mentor && (
+              <div className="mt-10">
+                <h3 className="text-xl font-bold text-navy-900">
+                  Mentor
+                </h3>
+
+                <p className="mt-3 text-navy-700">
+                  {selectedProject.mentor}
+                </p>
+              </div>
+            )}
+
+            {/* Resources */}
+              {selectedProject.resources &&
+                selectedProject.resources.length > 0 && (
+                  <div className="mt-10">
+                    <h3 className="text-xl font-bold text-navy-900">
+                      Project Resources
+                    </h3>
+
+                    <div className="mt-4 flex flex-wrap gap-3">
+                      {selectedProject.resources.map((resource) => (
+                        <a
+                          key={resource.url}
+                          href={resource.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-navy-700 transition hover:border-navy-700 hover:bg-blue-50"
+                        >
+                          📄 {resource.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+          </div>
+        </div>
+      )}
+
+      {/* Image Lightbox */}
+        {selectedImage && (
+          <div
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4"
+            onClick={() => setSelectedImage(null)}
+          >
+            <div
+              className="relative flex max-h-[95vh] max-w-[95vw] items-center justify-center"
+              onClick={(event) => event.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                type="button"
+                onClick={() => setSelectedImage(null)}
+                className="absolute right-2 top-2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-2xl text-white transition hover:bg-black"
+                aria-label="Close image"
+              >
+                ×
+              </button>
+
+              {/* Full Resolution Image */}
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.alt || 'Project screenshot'}
+                className="max-h-[90vh] max-w-[90vw] rounded-lg object-contain shadow-2xl"
+              />
+            </div>
+          </div>
+        )}
+
+    </PageShell>
   );
 };
 
