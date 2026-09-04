@@ -54,12 +54,12 @@ const IdentitySection = () => {
           <Reveal direction="left">
             <div className="grid grid-cols-1 md:grid-cols-2 min-h-[240px] bg-white">
               {/* Gradient Panel */}
-              <div className="relative bg-gradient-to-br from-sparkBlue to-sparkLightBlue flex items-center justify-center min-h-[180px] md:min-h-full overflow-hidden">
-                <div className="absolute inset-0 opacity-20"
-                  style={{ backgroundImage: 'radial-gradient(circle at 30% 50%, #19A7CE 0%, transparent 60%), radial-gradient(circle at 70% 50%, #85C227 0%, transparent 60%)' }}
+              <div className="relative flex items-center justify-center min-h-[180px] md:min-h-full overflow-hidden">
+                <img
+                  src="/images/Vision.png"
+                  alt="SPARK Vision — Study through projects and activities for renewing knowledge"
+                  className="w-full h-full object-cover"
                 />
-                <div className="relative z-10 w-32 h-24 rounded-xl border-2 border-dashed border-white/25" />
-                <div className="absolute -bottom-12 -right-12 w-40 h-40 rounded-full border border-white/10" />
               </div>
               {/* Text */}
               <div className="flex flex-col justify-center px-8 py-10 md:px-12 xl:px-14 bg-white">
@@ -89,12 +89,12 @@ const IdentitySection = () => {
                 </p>
               </div>
               {/* Gradient Panel */}
-              <div className="relative bg-gradient-to-bl from-sparkGreen/80 to-sparkAccent/80 flex items-center justify-center min-h-[180px] md:min-h-full overflow-hidden order-1 md:order-2">
-                <div className="absolute inset-0 opacity-30"
-                  style={{ backgroundImage: 'radial-gradient(circle at 60% 40%, #0B2447 0%, transparent 70%)' }}
+              <div className="relative flex items-center justify-center min-h-[180px] md:min-h-full overflow-hidden order-1 md:order-2">
+                <img
+                  src="/images/Mission.png"
+                  alt="SPARK Mission — Enriching community through technical diversity and innovation"
+                  className="w-full h-full object-cover"
                 />
-                <div className="relative z-10 w-32 h-24 rounded-xl border-2 border-dashed border-white/30" />
-                <div className="absolute -top-12 -left-12 w-40 h-40 rounded-full border border-white/10" />
               </div>
             </div>
           </Reveal>
