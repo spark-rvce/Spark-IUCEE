@@ -30,7 +30,6 @@ const Navbar = () => {
   ];
 
   const moreLinks = [
-    { name: 'Reports', to: '/reports' },
     { name: 'Projects', to: '/projects' },
   ];
 
