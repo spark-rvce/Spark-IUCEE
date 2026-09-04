@@ -8,6 +8,7 @@ const Projects = () => {
 
   const closeModal = () => {
     setSelectedProject(null);
+    setSelectedImage(null);
   };
 
   // Group projects by year and sort
