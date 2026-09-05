@@ -722,7 +722,7 @@ export const eventsByYear = {
         title: "Student Induction Programme 2026",
         tag: "Events & Competitions",
         date: "28/08/2026",
-        location: "CE 314",      
+        location: "CE 304",      
         shortDesc: "A 4-part, 45-minute induction series covering startup thinking, digital skills, innovation, and puzzle-solving for incoming students.",
         fullDesc: "As part of the Student Induction Programme 2026, four back-to-back 45-minute sessions were conducted at CE 205 to introduce new students to innovation, entrepreneurship, digital readiness, and teamwork through an activity-driven format. 'Mission: Impossible? – Build. Adapt. Pitch.' had participants pick random problems, technologies, audiences, and wildcards to build a startup idea on the spot, then pitch it in a gallery-style showdown. The 'Digital Launchpad Masterclass' covered building a LinkedIn profile, unlocking benefits through college email, and using AI tools for academic productivity. 'Stations of an Innovator' guided students through five stations — ideation, prototyping, pitching, an Impact Wall, and exploring the club's work. 'Decode.exe' closed the programme with a two-station puzzle challenge where teams combined clues to crack a final winning key. Together, the sessions offered a hands-on, gamified introduction to innovation and professional readiness.",
         images: [
@@ -740,7 +740,7 @@ export const eventsByYear = {
         ],
         speakers: ["SPARK Team"],
         drivePhotos: "https://drive.google.com/drive/folders/1wsgRK4uDNun2Ye_DhmQZ3t23_YXY7NJL",
-        docReport: "To be updated",
+        docReport: "https://drive.google.com/file/d/1VK_EdBqxJ7yN3QIG5svvYfyMzTV81NQ-/view?usp=sharing",
         stats: {
           sessions: "4",
           durationPerSession: "45 minutes",
