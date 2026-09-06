@@ -7,7 +7,7 @@ const developers = [
   {
     name: 'Ravi R',
     role: 'Website Developer - Design Lead',
-    email: 'ravir.is25@rvce.edu.in',
+    email: 'raviramakrishna2006@gmail.com',
   },
   {
     name: 'Krupanka',
