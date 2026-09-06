@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Preloader from './components/Preloader';
 import Navbar from './components/Navbar';
@@ -13,12 +13,31 @@ import Credits from './features/credits/Credits';
 
 import ScrollToTopButton from './components/ScrollToTopButton';
 
+
 // Scroll to top helper on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
-  useEffect(() => {
+
+  useLayoutEffect(() => {
+    // Prevent the browser from restoring the previous page's scroll position
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    // Scroll immediately
     window.scrollTo(0, 0);
+
+    // Scroll again on the next frame to handle mobile browser
+    // scroll-restoration timing
+    const frame = window.requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+    };
   }, [pathname]);
+
   return null;
 };
 
@@ -33,7 +52,7 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen bg-slate-50 font-sans antialiased overflow-x-hidden">
+    <div className="relative w-full min-h-screen bg-slate-50 font-sans antialiased overflow-x-clip">
       {loading && <Preloader onComplete={() => setLoading(false)} />}
       <div className={`transition-opacity duration-700 ${loading ? 'opacity-0 h-screen overflow-hidden' : 'opacity-100'}`}>
         <ScrollToTop />
