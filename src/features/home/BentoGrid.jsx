@@ -56,14 +56,16 @@ const IdentitySection = () => {
           {/* ── Row 1: Vision (image left, text right) ── */}
           <Reveal direction="left">
             <div className="grid grid-cols-1 md:grid-cols-2 min-h-[240px] bg-white">
-              {/* Vision Image */}
-                <div className="relative w-full aspect-[16/9] overflow-hidden bg-slate-100">
-                  <img
-                    src={VisionPhoto}
-                    alt="SPARK Vision"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+              {/* Gradient Panel */}
+              <div className="relative flex items-center justify-center p-6 md:p-8 bg-white min-h-[240px]">
+                <img
+                  src="/images/Vision.png"
+                  alt="SPARK Vision — Study through projects and activities for renewing knowledge"
+                  width={500}
+                  height={300}
+                  className="w-full max-w-[500px] h-auto max-h-[300px] object-contain rounded-2xl shadow-md"
+                />
+              </div>
               {/* Text */}
               <div className="flex flex-col justify-center px-8 py-10 md:px-12 xl:px-14 bg-white">
                 <h3 className="text-3xl md:text-4xl font-black text-sparkBlue mb-3 leading-tight">
@@ -91,14 +93,16 @@ const IdentitySection = () => {
                   Aim to enrich and enhance our community through technical and cultural diversity, curiosity, and the overall development of engineering students. Improving the educational experience beyond classroom walls and enhancing our ethical values. Innovations by out-of-the-box thinking.
                 </p>
               </div>
-              {/* Mission Image */}
-                <div className="relative w-full aspect-[16/9] overflow-hidden bg-slate-100 order-1 md:order-2">
-                  <img
-                    src={MissionPhoto}
-                    alt="SPARK Mission"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+              {/* Gradient Panel */}
+              <div className="relative flex items-center justify-center p-6 md:p-8 bg-slate-50 min-h-[240px] order-1 md:order-2">
+                <img
+                  src="/images/Mission.png"
+                  alt="SPARK Mission — Enriching community through technical diversity and innovation"
+                  width={500}
+                  height={300}
+                  className="w-full max-w-[500px] h-auto max-h-[300px] object-contain rounded-2xl shadow-md"
+                />
+              </div>
             </div>
           </Reveal>
 
