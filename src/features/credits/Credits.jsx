@@ -26,6 +26,36 @@ const developers = [
   },
 ];
 
+const juniors = [
+  {
+    name: 'Sanjana H V'
+  },
+  {
+    name: 'Ramya S'
+  },
+  {
+    name: 'Jairaj'
+  },
+  {
+    name: 'Satyendra'
+  },
+  {
+    name: 'P Nikitha'
+  },
+  {
+    name: 'Chaitanya G'
+  },
+  {
+    name: 'Inika'
+  },
+  {
+    name: 'Sinchana R Achar'
+  },
+  {
+    name: 'Aadithya V S'
+  }
+];
+
 const Credits = () => {
   return (
     <>
@@ -66,6 +96,46 @@ const Credits = () => {
               </Reveal>
             ))}
           </div>
+
+          {/* Junior Contributors */}
+            <Reveal delay={0.3}>
+              <div className="mb-12">
+                <div className="text-center mb-8">
+                  <span className="text-xl font-bold tracking-widest uppercase text-sparkAccent">
+                    Main Contributors
+                  </span>
+
+                  <h2 className="text-2xl md:text-3xl font-black text-sparkBlue mt-2">
+                    Junior Developers
+                  </h2>
+
+                  <p className="text-slate-400 text-sm mt-2 max-w-xxl mx-auto">
+                    Students who contributed to the development, content, testing, and refinement of the SPARK website.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                  {juniors.map((junior, i) => (
+                    <motion.div
+                      key={junior.name}
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: i * 0.06 }}
+                      className="bg-white rounded-xl px-4 py-5 text-center border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                    >
+                      <h3 className="text-sm md:text-base font-bold text-sparkBlue">
+                        {junior.name}
+                      </h3>
+
+                      <p className="text-[10px] md:text-xs text-slate-400 font-semibold uppercase tracking-wider mt-1">
+                        {junior.role}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
 
           <Reveal delay={0.4}>
             <div className="text-center bg-white rounded-2xl p-8 shadow-sm border border-slate-100 max-w-md mx-auto">
