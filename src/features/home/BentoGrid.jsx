@@ -54,11 +54,13 @@ const IdentitySection = () => {
           <Reveal direction="left">
             <div className="grid grid-cols-1 md:grid-cols-2 min-h-[240px] bg-white">
               {/* Gradient Panel */}
-              <div className="relative flex items-center justify-center min-h-[180px] md:min-h-full overflow-hidden">
+              <div className="relative flex items-center justify-center p-6 md:p-8 bg-white min-h-[240px]">
                 <img
                   src="/images/Vision.png"
                   alt="SPARK Vision — Study through projects and activities for renewing knowledge"
-                  className="w-full h-full object-cover"
+                  width={500}
+                  height={300}
+                  className="w-full max-w-[500px] h-auto max-h-[300px] object-contain rounded-2xl shadow-md"
                 />
               </div>
               {/* Text */}
@@ -89,11 +91,13 @@ const IdentitySection = () => {
                 </p>
               </div>
               {/* Gradient Panel */}
-              <div className="relative flex items-center justify-center min-h-[180px] md:min-h-full overflow-hidden order-1 md:order-2">
+              <div className="relative flex items-center justify-center p-6 md:p-8 bg-slate-50 min-h-[240px] order-1 md:order-2">
                 <img
                   src="/images/Mission.png"
                   alt="SPARK Mission — Enriching community through technical diversity and innovation"
-                  className="w-full h-full object-cover"
+                  width={500}
+                  height={300}
+                  className="w-full max-w-[500px] h-auto max-h-[300px] object-contain rounded-2xl shadow-md"
                 />
               </div>
             </div>
