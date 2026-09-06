@@ -9,6 +9,7 @@ const Projects = () => {
 
   const closeModal = () => {
     setSelectedProject(null);
+    setSelectedImage(null);
   };
 
   // Search projects across multiple fields

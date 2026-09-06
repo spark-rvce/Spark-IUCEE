@@ -7,7 +7,6 @@ import OfficeBearers from './features/office-bearers/OfficeBearers';
 import Wings from './features/wings/Wings';
 import Activities from './features/activities/Activities';
 import Podcasts from './features/podcasts/Podcasts';
-import Reports from './features/reports/Reports';
 import Projects from './features/projects/Projects';
 import ContactUs from './features/contact-us/ContactUs';
 import Credits from './features/credits/Credits';
@@ -46,7 +45,6 @@ function AppContent() {
             <Route path="/wings" element={<Wings />} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/podcasts" element={<Podcasts />} />
-            <Route path="/reports" element={<Reports />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/credits" element={<Credits />} />

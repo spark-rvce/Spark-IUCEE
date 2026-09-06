@@ -5,24 +5,24 @@ import Footer from '../../components/Footer';
 
 const developers = [
   {
-    name: 'Name 1',
-    role: 'Website Developer',
-    email: 'email1@rvce.edu.in',
+    name: 'Ravi R',
+    role: 'Website Developer - Design Lead',
+    email: 'raviramakrishna2006@gmail.com',
   },
   {
-    name: 'Name 2',
-    role: 'Website Developer',
-    email: 'email2@rvce.edu.in',
+    name: 'Krupanka R',
+    role: 'Website Developer - Coding Lead',
+    email: 'krupankaramesha@gmail.com',
   },
   {
-    name: 'Name 3',
-    role: 'Website Developer',
-    email: 'email3@rvce.edu.in',
+    name: 'Arya Shetty',
+    role: 'Website Developer - Integration Lead',
+    email: 'aryashetty020206@gmail.com',
   },
   {
-    name: 'Name 4',
-    role: 'Website Developer',
-    email: 'email4@rvce.edu.in',
+    name: 'Manyashree S',
+    role: 'Website Developer - Testing & QA Lead',
+    email: 'manyaskaranth@gmail.com',
   },
 ];
 

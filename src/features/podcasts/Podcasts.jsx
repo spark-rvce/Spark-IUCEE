@@ -34,9 +34,9 @@ const podcastEpisodes = [
   },
   {
     id: 'C1',
-    title: "The Insight | Podcast with E-Cell",
-    url: "https://www.youtube.com/watch?v=VKsdX9mIRp4",
-    description: "Dive into the world of entrepreneurship and innovation with the members of E-Cell as they share startup stories and advice."
+    title: `“ಮಾತಿನ ನಾದ: ಕನ್ನಡದ ಹಾದಿ”   ಪ್ರತಿ ಮಾತು — ಒಂದು ಪಯಣ, ಒಂದು ಪ್ರೇರಣೆ`,
+    url: "https://youtu.be/ubsZVTZyM1Y?si=hWY592ca2xm5Go5O",
+    description: "A soulful glimpse into our college’s Kannada Sangha — celebrating Kannada as more than a language, but as our identity, culture, and pride. From literature to folk traditions, discover how the Sangha keeps the spirit of Namma Kannada alive by blending tradition, creativity, and the energy of today’s youth."
   },
   {
     id: 'C2',
@@ -52,21 +52,39 @@ const podcastEpisodes = [
   },
   {
     id: 'C4',
+    title: "The Insight | Podcast with E-Cell",
+    url: "https://www.youtube.com/watch?v=VKsdX9mIRp4",
+    description: "Dive into the world of entrepreneurship and innovation with the members of E-Cell as they share startup stories and advice."
+  },
+  {
+    id: 'C5',
     title: "The Insight | Podcast with E-CARV",
     url: "https://www.youtube.com/watch?v=yBUgQBeuebQ",
     description: "Get the inside scoop on E-CARV, their latest automotive projects, and what it takes to build a competitive electric vehicle."
   },
   {
-    id: 'C5',
+    id: 'C6',
     title: "The Insight | Podcast with Kannada CARV",
     url: "https://www.youtube.com/watch?v=u_7vFQu3ZtA",
     description: "Celebrating culture and language—a wonderful discussion with the team from Kannada CARV about their initiatives and events."
   },
   {
-    id: 'C6',
-    title: `“ಮಾತಿನ ನಾದ: ಕನ್ನಡದ ಹಾದಿ”   ಪ್ರತಿ ಮಾತು — ಒಂದು ಪಯಣ, ಒಂದು ಪ್ರೇರಣೆ`,
-    url: "https://youtu.be/ubsZVTZyM1Y?si=hWY592ca2xm5Go5O",
-    description: "A soulful glimpse into our college’s Kannada Sangha — celebrating Kannada as more than a language, but as our identity, culture, and pride. From literature to folk traditions, discover how the Sangha keeps the spirit of Namma Kannada alive by blending tradition, creativity, and the energy of today’s youth."
+    id: 'C7',
+    title: "ALAAP: The Rhythm within RVCE",
+    url: "https://www.youtube.com/watch?v=KVI5I-SF1XI",
+    description: "From the excitement of auditions and the energy of live performances to competitions, collaborations, and the moments that happen behind the scenes, this conversation takes us through the journey of ALAAP. Discover what it takes to bring different voices, instruments, genres, and personalities together, and how a shared passion for music creates a community that keeps growing and inspiring."
+  },
+  {
+    id: 'C8',
+    title: "Beyond the Parade | NCC RVCE",
+    url: "https://www.youtube.com/watch?v=HmLhhtLBYz4",
+    description: "From training and camps to leadership, teamwork, and unforgettable moments, this conversation offers a glimpse into the life and culture of NCC at RVCE."
+  },
+  {
+    id: 'C9',
+    title: "ACCELERATE RVCE : Beyond the syntax, into the System !!",
+    url: "https://www.youtube.com/watch?v=oyYWtpJQmtU",
+    description: "From hackathons and workshops to innovation challenges and idea-pitching events like PitchIT, Accelerate creates a space where students can innovate, connect, and inspire. In this conversation, we dive into what goes on behind the scenes — the journey of building technical skills, working on ideas, organizing impactful events, and being part of a community that encourages students to turn their ideas into action."
   }
 ];
 
