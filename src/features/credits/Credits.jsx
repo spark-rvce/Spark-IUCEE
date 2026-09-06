@@ -10,7 +10,7 @@ const developers = [
     email: 'raviramakrishna2006@gmail.com',
   },
   {
-    name: 'Krupanka',
+    name: 'Krupanka R',
     role: 'Website Developer - Coding Lead',
     email: 'krupankaramesha@gmail.com',
   },

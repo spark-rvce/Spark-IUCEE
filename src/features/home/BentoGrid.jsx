@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Mic } from 'lucide-react';
 import Reveal from '../../components/Reveal';
 
+import MissionPhoto from './assets/Mission-photo.jpeg';
+import VisionPhoto from './assets/Vision-photo.jpeg';
+
 const wings = [
   {
     label: 'Projects & R&D',
@@ -53,14 +56,14 @@ const IdentitySection = () => {
           {/* ── Row 1: Vision (image left, text right) ── */}
           <Reveal direction="left">
             <div className="grid grid-cols-1 md:grid-cols-2 min-h-[240px] bg-white">
-              {/* Gradient Panel */}
-              <div className="relative bg-gradient-to-br from-sparkBlue to-sparkLightBlue flex items-center justify-center min-h-[180px] md:min-h-full overflow-hidden">
-                <div className="absolute inset-0 opacity-20"
-                  style={{ backgroundImage: 'radial-gradient(circle at 30% 50%, #19A7CE 0%, transparent 60%), radial-gradient(circle at 70% 50%, #85C227 0%, transparent 60%)' }}
-                />
-                <div className="relative z-10 w-32 h-24 rounded-xl border-2 border-dashed border-white/25" />
-                <div className="absolute -bottom-12 -right-12 w-40 h-40 rounded-full border border-white/10" />
-              </div>
+              {/* Vision Image */}
+                <div className="relative w-full aspect-[16/9] overflow-hidden bg-slate-100">
+                  <img
+                    src={VisionPhoto}
+                    alt="SPARK Vision"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               {/* Text */}
               <div className="flex flex-col justify-center px-8 py-10 md:px-12 xl:px-14 bg-white">
                 <h3 className="text-3xl md:text-4xl font-black text-sparkBlue mb-3 leading-tight">
@@ -88,14 +91,14 @@ const IdentitySection = () => {
                   Aim to enrich and enhance our community through technical and cultural diversity, curiosity, and the overall development of engineering students. Improving the educational experience beyond classroom walls and enhancing our ethical values. Innovations by out-of-the-box thinking.
                 </p>
               </div>
-              {/* Gradient Panel */}
-              <div className="relative bg-gradient-to-bl from-sparkGreen/80 to-sparkAccent/80 flex items-center justify-center min-h-[180px] md:min-h-full overflow-hidden order-1 md:order-2">
-                <div className="absolute inset-0 opacity-30"
-                  style={{ backgroundImage: 'radial-gradient(circle at 60% 40%, #0B2447 0%, transparent 70%)' }}
-                />
-                <div className="relative z-10 w-32 h-24 rounded-xl border-2 border-dashed border-white/30" />
-                <div className="absolute -top-12 -left-12 w-40 h-40 rounded-full border border-white/10" />
-              </div>
+              {/* Mission Image */}
+                <div className="relative w-full aspect-[16/9] overflow-hidden bg-slate-100 order-1 md:order-2">
+                  <img
+                    src={MissionPhoto}
+                    alt="SPARK Mission"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
             </div>
           </Reveal>
 
