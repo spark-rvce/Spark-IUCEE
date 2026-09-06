@@ -101,7 +101,7 @@ const Credits = () => {
             <Reveal delay={0.3}>
               <div className="mb-12">
                 <div className="text-center mb-8">
-                  <span className="text-xl font-bold tracking-widest uppercase text-sparkAccent">
+                  <span className="text-3xl font-bold tracking-widest uppercase text-sparkAccent">
                     Main Contributors
                   </span>
 

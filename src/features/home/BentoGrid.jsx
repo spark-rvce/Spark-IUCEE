@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Mic } from 'lucide-react';
 import Reveal from '../../components/Reveal';
 
-import MissionPhoto from './assets/Mission-photo.jpeg';
-import VisionPhoto from './assets/Vision-photo.jpeg';
-
 const wings = [
   {
     label: 'Projects & R&D',
