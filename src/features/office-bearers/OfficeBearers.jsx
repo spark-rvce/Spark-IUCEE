@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Reveal from '../../components/Reveal';
 import Footer from '../../components/Footer';
+import SEOHead from '../../components/SEOHead';
 
 /* ════════════════════════════════════════════════════════════
    OFFICE BEARERS DATA (2024-25)
@@ -517,6 +518,11 @@ const OfficeBearers = () => {
 
   return (
     <>
+      <SEOHead
+        title="Office Bearers & Members | SPARK IUCEE RVCE"
+        description="Meet the office bearers, faculty advisors, core team, and wing heads of SPARK IUCEE RVCE at RV College of Engineering, Bengaluru."
+        path="/office-bearers"
+      />
       {/* Hero Banner — Title ONLY */}
       <section className="relative pt-32 pb-16 px-6 text-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #051525 0%, #0B2447 35%, #0d2f5c 60%, #19376D 100%)' }}>
         <div className="absolute inset-0 pointer-events-none">

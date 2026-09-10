@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import PageShell from '../../components/PageShell';
+import SEOHead from '../../components/SEOHead';
 
 const podcastEpisodes = [
   {
@@ -197,6 +198,11 @@ const Podcasts = () => {
       title="SPARK Podcasts"
       subtitle="Exclusive conversations on technology, SDGs, engineering careers, and life at RVCE."
     >
+      <SEOHead
+        title="SPARK Podcasts | SPARK IUCEE RVCE"
+        description="Listen to exclusive SPARK IUCEE RVCE podcast conversations on technology, SDGs, engineering careers, and campus life at RV College of Engineering."
+        path="/podcasts"
+      />
       <div className="bg-slate-50 min-h-screen py-20 px-6">
         <div className="max-w-5xl mx-auto flex flex-col gap-8">
           <div className="mb-16">

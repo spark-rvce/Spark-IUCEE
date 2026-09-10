@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import PageShell from '../../components/PageShell';
+import SEOHead from '../../components/SEOHead';
 
 const wingsData = [
   {
@@ -133,6 +134,11 @@ const Wings = () => {
       title="The 5 Wings"
       subtitle="Five specialized wings working in unison to create a complete ecosystem for student growth."
     >
+      <SEOHead
+        title="The 5 Wings | SPARK IUCEE RVCE"
+        description="Explore the five specialized wings of SPARK IUCEE RVCE — Activities & Events, Industrial Connect, Projects R&D, Social Media, and Women Empowerment at RV College of Engineering."
+        path="/wings"
+      />
       <div className="bg-slate-50 min-h-screen py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">

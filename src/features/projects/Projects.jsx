@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PageShell from '../../components/PageShell';
 import { projectsData } from '../../data/projectsData';
+import SEOHead from '../../components/SEOHead';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -61,6 +62,11 @@ const Projects = () => {
       title="Projects & Innovations"
       subtitle="Explore student-led engineering projects, research studies, and prototypes."
     >
+      <SEOHead
+        title="Projects & Innovations | SPARK IUCEE RVCE"
+        description="Explore student-led engineering projects, research studies, and prototypes by SPARK IUCEE RVCE at RV College of Engineering, Bengaluru."
+        path="/projects"
+      />
       <section className="bg-slate-50 px-6 py-16 md:py-24">
         <div className="mx-auto max-w-7xl">
 

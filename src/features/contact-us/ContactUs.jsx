@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Reveal from '../../components/Reveal';
 import Footer from '../../components/Footer';
+import SEOHead from '../../components/SEOHead';
 
 const contacts = [
   {
@@ -27,6 +28,11 @@ const contacts = [
 const ContactUs = () => {
   return (
     <>
+      <SEOHead
+        title="Contact Us | SPARK IUCEE RVCE"
+        description="Get in touch with SPARK IUCEE RVCE — the official IUCEE Student Chapter at RV College of Engineering, Bengaluru. Contact our faculty advisors and student leaders."
+        path="/contact-us"
+      />
       <section className="relative pt-32 pb-16 px-6 text-center overflow-hidden" style={{ background: 'linear-gradient(135deg, #051525 0%, #0B2447 35%, #0d2f5c 60%, #19376D 100%)' }}>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-sparkAccent/10 blur-[120px]" />

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spark-iucee-rvce.vercel.app/sitemap.xml

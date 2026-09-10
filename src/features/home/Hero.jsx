@@ -156,7 +156,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-sparkBlue/30 group-hover:bg-transparent transition-colors duration-300 z-10" />
               <img
                 src={img}
-                alt="Event"
+                alt="SPARK IUCEE RVCE event highlights"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
             </div>
