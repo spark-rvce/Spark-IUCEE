@@ -187,7 +187,7 @@ const EventsAndActivities = () => {
                        : y === '2025'
                         ? '14 Events'
                         : y === '2026'
-                          ? '6 Events'
+                          ? '7 Events'
                         : 'Archive'}
                     </span>
                   </div>
