@@ -718,6 +718,26 @@ export const eventsByYear = {
     status: "active",
     events: [
       {
+        id: "Skill labs for CS",
+        title: "Skill lab Series Hosting (Two Tracks) 2026",
+        tag: "Outreach & Impact",
+        date: "24th, 25th, 27th, and 31st August, 2026",
+        location: "RVCE Campus",
+        shortDesc: "A 4-session skill lab by SPARK covering computer hardware, OS installation, Windows command-line operations, and web development fundamentals for first-year CSE students.",
+        fullDesc: "Organized by SPARK - Student Chapter, the Skill Lab Series 2026 was conducted across two modules for first-year CSE students. Module 1: Computer Hardware, OS Installation & Windows Commands, mentored by Dr. Anitha Sandeep, ran across two sessions covering motherboard anatomy, RAM and storage technologies, SMPS power delivery, and Raspberry Pi networking, followed by the boot chain — POST, BIOS vs. UEFI, firmware diagnostics, disk partitioning, OS deployment, device drivers, and live system diagnostics through Command Prompt and PowerShell. Module 2: Web Development Skill Lab, mentored by Dr. Manonmani S, introduced students to web architecture, HTML/CSS fundamentals, JavaScript basics, and Git/GitHub in its first session, followed by back-end concepts including databases, frameworks, Flask application setup, HTTP methods, and Python-Flask integration in its second. Both modules combined structured walkthroughs with hands-on mini-projects, live demonstrations, and interactive quizzes, giving students a well-rounded foundation spanning physical hardware, system administration, and full-stack web development.",
+        images: [
+          "/events_2026/skill-lab/skill-lab-1.jpg",
+          "/events_2026/skill-lab/skill-lab-2.jpg",
+          "/events_2026/skill-lab/skill-lab-3.jpg",
+          "/events_2026/skill-lab/skill-lab-4.jpg"
+        ],
+        highlights: ["60-80 students per session","Hardware, OS & command-line training","Front-end & back-end web development"],
+        speakers: ["Kavin Krishnan C", "A S Nemitha","Inika Ranganath Prasad", "Jairaj S","Satyendra Nayak K"],
+        drivePhotos: "https://drive.google.com/drive/folders/1TG5unJZJRPt_OVG7r2NO-9PfJ806nZR-",
+        docReport : "https://drive.google.com/drive/folders/1LTM8Jn7_sAj8vOBneGR3Gvenge_eA7Ya",
+        stats: {modules: "2", sessions: "4",attendeesPerSession: "60-80 Students", facultyMentors: "2", studentInstructors: "4",status: "Completed"}
+      },
+      {
         id: "student-induction-programme-2026",
         title: "Student Induction Programme 2026",
         tag: "Events & Competitions",
@@ -846,7 +866,7 @@ export const eventsByYear = {
         id: "mun-2026",
         title: "MUN",
         tag: "Events & Competitions",
-        date: "09/04/2026",
+        date: "09/05/2026",
         location: "RVCE Campus",
         shortDesc: "SPARK MUN 2026 provided a diplomatic debate platform focused on women empowerment, policy dialogue, and collaborative global problem-solving.",
         fullDesc: "The Model United Nations Conference 2026 was organized by SPARK, RV College of Engineering, to create a platform for diplomatic discussion, policy-oriented debate, and collaborative problem-solving on socially relevant global issues. Centered on the theme of women empowerment, the conference encouraged delegates to examine gender rights, healthcare accessibility, and technological inclusion through structured parliamentary procedure and committee deliberations. The event provided practical exposure to diplomacy, negotiation, public speaking, and resolution drafting while promoting respectful dialogue, analytical thinking, and student leadership. The conference featured active participation from delegates across departments and included three committees: Women Rights and Protection Against Gender-Based Violence, Technology and Gender: Bridging the Digital Divide, and Gender and Health: Access to Healthcare and Reproductive Rights. Guided by Executive Board members, committee sessions were conducted through moderated debate, caucuses, and voting procedures with a strong focus on constructive policy outcomes.",

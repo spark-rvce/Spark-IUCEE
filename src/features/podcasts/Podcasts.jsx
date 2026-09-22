@@ -86,6 +86,18 @@ const podcastEpisodes = [
     title: "ACCELERATE RVCE : Beyond the syntax, into the System !!",
     url: "https://www.youtube.com/watch?v=oyYWtpJQmtU",
     description: "From hackathons and workshops to innovation challenges and idea-pitching events like PitchIT, Accelerate creates a space where students can innovate, connect, and inspire. In this conversation, we dive into what goes on behind the scenes — the journey of building technical skills, working on ideas, organizing impactful events, and being part of a community that encourages students to turn their ideas into action."
+  },
+  {
+    id: 'C10',
+    title: "RAAG Unplugged: Behind the Scenes of RVCE’s Youth Club",
+    url: "https://www.youtube.com/watch?v=y3MTrS-wXlQ",
+    description: "From cultural celebrations and student activities to some of the most exciting moments on campus, RAAG creates a space where students can express, connect, participate, and create. In this conversation, we go behind the scenes to discover what it takes to bring these experiences together — the planning, the teamwork, the challenges, the chaos, and the unforgettable moments along the way. Beyond the events and the spotlight, we dive into the journey of the people who make it all happen and what it truly means to be part of the youth community at RVCE."
+  },
+  {
+    id: 'C11',
+    title: "Evolvion Unfiltered: Ideas beyond the lab",
+    url: "https://www.youtube.com/watch?v=VYqCVIbbgos",
+    description: "From the unexpected turnout and behind-the-scenes journey of Murder Under the Microscope 🔬🧫 to the innovation and ideas sparked through Inflection: One Day, One Idea 💡🧬, we dive into events, leadership, teamwork, and the journey of building Evolvion."
   }
 ];
 
