@@ -66,7 +66,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[900px] flex flex-col justify-between overflow-hidden"
+      className="relative min-h-[780px] flex flex-col justify-between overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #051525 0%, #0B2447 35%, #0d2f5c 60%, #19376D 100%)',
       }}

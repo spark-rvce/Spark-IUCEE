@@ -13,6 +13,7 @@ import Registrations from './features/registrations/Registrations';
 import ContactUs from './features/contact-us/ContactUs';
 import Credits from './features/credits/Credits';
 import RecruitmentPopup from './components/RecruitmentPopup';
+import recruitmentConfig from './config/recruitmentConfig';
 
 import ScrollToTopButton from './components/ScrollToTopButton';
 
@@ -70,7 +71,9 @@ function AppContent() {
             <Route path="/podcasts" element={<Podcasts />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/achievements" element={<Achievements />} />
-            <Route path="/registrations" element={<Registrations />} />
+            {recruitmentConfig.recruitmentEnabled && (
+              <Route path="/registrations" element={<Registrations />} />
+            )}
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/credits" element={<Credits />} />
           </Routes>

@@ -393,7 +393,7 @@ const previousYearsData = [
     wings: [
       {
         title: 'Activities and Events',
-        heads: [{ name: 'Rakshith C M' }, { name: 'Varshith K Battikoppad' }],
+        heads: [{ name: 'Rakshith C M' }, { name: 'Prithviraj R' }],
       },
       {
         title: 'Industrial Connect and People Operations',

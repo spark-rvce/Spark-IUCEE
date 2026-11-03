@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import recruitmentConfig from '../config/recruitmentConfig';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,7 +37,9 @@ const Navbar = () => {
 
   const moreLinks = [
     { name: 'Achievements', to: '/achievements' },
-    { name: 'Registrations', to: '/registrations' },
+    ...(recruitmentConfig.recruitmentEnabled
+      ? [{ name: 'Registrations', to: '/registrations' }]
+      : []),
     { name: 'Credits', to: '/credits' },
     { name: 'Contact Us', to: '/contact-us' },
   ];
