@@ -116,7 +116,7 @@ export const achievementsByYear = {
           'Yashwanth R',
           'Ashok R',
           'Dakshraj Shetty',
-          'Chinmayi Shetty',
+          'Chinmayi Devi H N',
           'Manish Kumar CS',
         ],
         projectTitle: null,
