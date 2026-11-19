@@ -231,7 +231,7 @@ export const achievementsByYear = {
         ],
         projectTitle: null,
         description: null,
-        images: ['/Achievements/am26-ideathon.jpg'],
+        images: ['/Achievements/am26-ideathon.jpeg'],
         eventLink: null,
       },
       {
